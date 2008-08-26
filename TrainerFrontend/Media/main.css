@@ -1,0 +1,211 @@
+/* Atrendia base stylesheet. 
+
+    Brand colors are:
+        #03345f - dark blue
+        #8ac103 - green
+        #ffffff - white
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body, td, th {
+    font-family: helvetica, arial, sans-serif;
+    font-size: 13px;
+}
+body {
+    background: #fff url(background_gradient.gif) repeat-x;
+    color: #000;
+    width: 100%;
+}
+.clear {
+    clear: both;
+}
+
+/* Header */
+#header {
+    width: 100%;
+}
+#header div.border {
+    position: absolute;
+    left: 0;
+    top: 55px;
+    width: 100%;
+    margin-left: -20px;
+    padding-left: 20px;
+    border-bottom: 4px solid #03345f;
+}
+#header h1 {
+    position: absolute;
+    left: 20px;
+    top: -30px;
+    height: 0;
+    width: 400px;
+    padding: 40px 0 0 0;
+    overflow: hidden;
+    background: url(atrendia_logo.png) no-repeat;
+}
+#current-user {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 13px;
+    line-height: 30px;
+    text-align: right;
+    color: #333;
+}
+#current-user .contact {
+    color: #000;
+}
+#current-user .company {
+	display: none;
+}
+
+/* Content. */
+#content {
+    margin: 80px 20px 50px 320px;
+}
+
+/* Sidebar. */
+#sidebar {
+    position: absolute;
+    left: 50px;
+    top: 75px;
+    width: 240px;
+}
+#sidebar #your-contact {
+    width: 220px;
+}
+#sidebar #your-contact h2 {
+    padding: 0 10px;
+    margin: 10px 0 0 0;
+    font-size: 14px;
+    line-height: 25px;
+    color: #333;
+    background: url(block_header_grad.gif) no-repeat;    
+}
+#sidebar #your-contact .details {
+    padding: 10px;
+    background: #eee;
+    border: 1px solid #dedede;
+}
+
+/* Menu. */
+#menu ul {
+    list-style-type: none;
+}
+#menu li a, #menu li.active li a {
+    display: block;
+    padding: 8px;
+    background: url(menu_inactive_grad.gif) no-repeat right center;
+}
+#menu li.active a, #menu a:hover {
+    background: url(menu_active_grad.gif) no-repeat right center;
+}
+#menu li li {
+    margin-left: 20px;
+}
+#menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Body */
+p {
+    line-height: 20px;
+    margin: 0 0 6px 0;
+}
+p.success {
+    border-left: 3px #197b30 solid;
+    padding: 0 0 0 10px;
+    font-weight: bold;
+    color: #197b30;
+}
+p.error {
+    border-left: 3px #9e0039 solid;
+    padding: 0 0 0 10px;
+    font-weight: bold;
+    color: #9e0039;    
+}
+p.shifted {
+    margin-left: 30px;
+}
+h2 {
+    margin: 6px 0 5px 0;
+    font-size: 18px;
+    color: #03345f;
+}
+h3 {
+    margin: 5px 0 3px 0;
+    font-size: 14px;
+    color: #03345f;
+}
+a {
+    color: #03345f;
+    text-decoration: underline;
+}
+span.email {
+    background: url(email.png) no-repeat left center;
+    padding-left: 20px;
+}
+a:hover {
+    background: #03345f;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Tables. */
+table.data {
+    border-collapse: collapse;
+    border-bottom: 1px solid #03345f;
+    margin: 5px 0;
+}
+table.data th {
+    padding: 10px 10px;
+    background: #03345f;
+    color: #fff;
+    text-align: left;
+}
+table.data td {
+    padding: 7px 5px;
+    background: #e8e8e8;
+}
+table.data tr.odd td {
+    background: #d8d8d8;
+}
+
+/* Forms. */
+label {
+    font-weight: bold;
+}
+input.text {
+    font-family: helvetica, arial, sans-serif;
+    font-size: 13px;
+    padding: 3px;
+    margin-bottom: -3px;
+}
+input.text.tiny {
+    width: 40px;
+}
+input.text.small {
+    width: 80px;
+}
+input.text.medium {
+    width: 120px;
+}
+input.text.normal {
+    width: 250px;
+}
+input.text.wide {
+    width: 500px;
+}
+input.radio, .radio input {
+    margin: 0 5px 0 0;
+}
+input.file {
+	padding: 3px;
+	width: 200px;	
+}
+	
