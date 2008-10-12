@@ -151,6 +151,13 @@
     <Compile Include="PasswordRecovery.aspx.designer.cs">
       <DependentUpon>PasswordRecovery.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Profile\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Support\BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
@@ -207,6 +214,7 @@
     <Content Include="Logout.aspx" />
     <Content Include="Calendar\Default.aspx" />
     <Content Include="PasswordRecovery.aspx" />
+    <Content Include="Profile\Default.aspx" />
     <Content Include="Support\Controls\ClientData.ascx" />
     <Content Include="Support\Controls\TrainerActivityCalendar.ascx" />
     <Content Include="Support\Controls\TrainingActivityHeading.ascx" />

@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PasswordRecovery.aspx.cs" 
-    Inherits="Atrendia.CourseManagement.TrainerFrontend.PasswordRecovery" 
+    Inherits="Atrendia.CourseManagement.Frontend.PasswordRecovery" 
     MasterPageFile="~/Support/Global.Master" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Title" runat="server">
     Trainers Site Password Reset</asp:Content>

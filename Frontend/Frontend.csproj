@@ -60,6 +60,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PasswordRecovery.aspx.cs">
+      <DependentUpon>PasswordRecovery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PasswordRecovery.aspx.designer.cs">
+      <DependentUpon>PasswordRecovery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Support\BasePageActivity.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -272,6 +286,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Media\Contacts_Example.csv" />
+    <Content Include="PasswordRecovery.aspx" />
+    <Content Include="Profile\Default.aspx" />
     <Content Include="Support\Controls\PlannedCourses.ascx" />
     <Content Include="Support\Controls\TrainingActivityHeading.ascx" />
   </ItemGroup>
