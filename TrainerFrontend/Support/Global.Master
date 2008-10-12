@@ -44,10 +44,13 @@
                                 <!-- Must have absolute URLs here hence ResolveUrl -->
                                 <li><a href="<%= ResolveUrl("~/Calendar/") %>">Training sessions</a></li>
                                 <li><a href="<%= ResolveUrl("~/Company/") %>">Companies</a></li>
+                                <li><a href="<%= ResolveUrl("~/Profile/") %>">Profile</a></li>
                             </LoggedInTemplate>
                             <AnonymousTemplate>
-                                <li><a href="<%= ResolveUrl("~/Login.aspx") %>">Login</a></li>
-                                <li><a href="<%= ResolveUrl("~/PasswordRecovery.aspx") %>">Reset Password</a></li>
+                                <li>
+                                    <a href="<%= ResolveUrl("~/Login.aspx") %>">Login</a>
+                                    <li><a href="<%= ResolveUrl("~/PasswordRecovery.aspx") %>">Reset Password</a></li>
+                                </li>
                             </AnonymousTemplate>
                         </asp:LoginView>
                     </ul>

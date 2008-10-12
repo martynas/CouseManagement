@@ -50,6 +50,15 @@ namespace Atrendia.CourseManagement.Frontend.Support {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder Menu;
         
         /// <summary>
+        /// lvMenu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LoginView lvMenu;
+        
+        /// <summary>
         /// ResponsibleUser control.
         /// </summary>
         /// <remarks>

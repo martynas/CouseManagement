@@ -31,7 +31,6 @@
                     </LoggedInTemplate>
                     <AnonymousTemplate>
                         <a runat="server" href="~/Login.aspx">Login</a>
-                        <li><a href="~/PasswordRecovery.aspx">Reset Password</a></li>
                     </AnonymousTemplate>
                 </asp:LoginView>
             </div>
@@ -40,17 +39,30 @@
         <div id="sidebar">
             <div id="menu">
                 <asp:ContentPlaceHolder ID="Menu" runat="server">
-                    <ul>
-                        <!-- Must have absolute URLs here hence ResolveUrl -->
-                        <li><a href="<%= ResolveUrl("~/Overview/") %>">Overview</a></li>
-                        <li><a href="<%= ResolveUrl("~/Calendar/") %>">Training sessions</a></li>
-                        <li>
-                            <a href="<%= ResolveUrl("~/People/Default.aspx") %>">People</a>
+                    <asp:LoginView ID="lvMenu" runat="server">
+                        <LoggedInTemplate>
                             <ul>
-                                <li><a href="<%= ResolveUrl("~/People/Upload.aspx") %>">Upload</a></li>
+                                <!-- Must have absolute URLs here hence ResolveUrl -->
+                                <li><a href="<%= ResolveUrl("~/Overview/") %>">Overview</a></li>
+                                <li><a href="<%= ResolveUrl("~/Calendar/") %>">Training sessions</a></li>
+                                <li>
+                                    <a href="<%= ResolveUrl("~/People/Default.aspx") %>">People</a>
+                                    <ul>
+                                        <li><a href="<%= ResolveUrl("~/People/Upload.aspx") %>">Upload</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="<%= ResolveUrl("~/Profile/") %>">Profile</a></li>
                             </ul>
-                        </li>
-                    </ul>
+                        </LoggedInTemplate>
+                        <AnonymousTemplate>
+                            <ul>
+                                <li>
+                                    <a href="<%= ResolveUrl("~/Login.aspx") %>">Login</a>
+                                    <li><a href="<%= ResolveUrl("~/PasswordRecovery.aspx") %>">Reset Password</a></li>
+                                </li>
+                            </ul>
+                        </AnonymousTemplate>
+                    </asp:LoginView>
                 </asp:ContentPlaceHolder>
             </div>
             <asp:ContentPlaceHolder ID="ResponsibleUser" runat="server">

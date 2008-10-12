@@ -1,10 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Atrendia.CourseManagement.Frontend.Login" MasterPageFile="~/Support/Global.Master" %>
 <asp:Content ContentPlaceHolderID="Title" runat="server">Overview</asp:Content>
-<asp:Content ContentPlaceHolderID="Menu" runat="server">
-    <ul>
-        <li class="active"><a href="~/Login.aspx" runat="server">Login</a></li>
-    </ul>
-</asp:Content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Calendar" runat="server">
     <!-- Look ma, no calendar. -->

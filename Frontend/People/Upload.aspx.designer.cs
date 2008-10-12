@@ -131,6 +131,15 @@ namespace Atrendia.CourseManagement.Frontend.People {
         protected global::System.Web.UI.WebControls.WizardStep viewPlannedCourses;
         
         /// <summary>
+        /// p1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl p1;
+        
+        /// <summary>
         /// cpCoursePlanning control.
         /// </summary>
         /// <remarks>
@@ -147,5 +156,23 @@ namespace Atrendia.CourseManagement.Frontend.People {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnPlannedCoursesConfirm;
+        
+        /// <summary>
+        /// viewFinnish control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.WizardStep viewFinnish;
+        
+        /// <summary>
+        /// p2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl p2;
     }
 }

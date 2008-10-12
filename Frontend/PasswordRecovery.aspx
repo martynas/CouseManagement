@@ -7,9 +7,6 @@
     
     <h2>Reset your password</h2>
     
-    <p>Here you can reset your passoword if you have forgotten it. Please provide your e-mail and 
-        press "Reset" and your password will be sent by e-mail.</p>
-    
     <asp:PasswordRecovery ID="prRecovery" runat="server">
         <UserNameTemplate>
             <p>Here you can reset your passoword if you have forgotten it. Please provide your e-mail and 
