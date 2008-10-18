@@ -14,6 +14,7 @@
     <link rel="stylesheet" runat="server" href="~/Media/extra.css" type="text/css"/>
     <script type="text/javascript" src="<%= ResolveUrl("~/Media/mootools-1.11.js") %>"></script>
     <script type="text/javascript" src="<%= ResolveUrl("~/Media/site.js") %>"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/Media/jquery.js") %>"></script>
 </head>
 <body>
     <form id="CourseManagementForm" runat="server">

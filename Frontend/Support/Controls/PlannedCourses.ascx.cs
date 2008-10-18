@@ -141,7 +141,7 @@ namespace Atrendia.CourseManagement.Frontend.Support.Controls
                 Logic.Entities.ProductGroup pg = (Logic.Entities.ProductGroup)e.Item.DataItem;
 
                 Literal ltProductTitle = (Literal)e.Item.FindControl("ltProductTitle");
-                CheckBox cbProductTitle = (CheckBox)e.Item.FindControl("cbProductTitle");
+                //CheckBox cbProductTitle = (CheckBox)e.Item.FindControl("cbProductTitle");
 
                 ltProductTitle.Text = pg.Heading;
             }

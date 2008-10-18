@@ -286,6 +286,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Media\Contacts_Example.csv" />
+    <Content Include="Media\jquery.js" />
     <Content Include="PasswordRecovery.aspx" />
     <Content Include="Profile\Default.aspx" />
     <Content Include="Support\Controls\PlannedCourses.ascx" />

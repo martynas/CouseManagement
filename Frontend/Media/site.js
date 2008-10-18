@@ -44,11 +44,11 @@ Element.extend({
  * of element that has tag name of parentTag. */
 function magicLinks(selector, parentTag, apply) {
     var current = window.location.pathname;
-    $ES(selector).each(function (el) {
-        var href = el.getProperty('href');
+    $(selector).each(function (el) {
+        var href = this.getProperty('href');
         parentTag = parentTag.toLowerCase();
         if (current.startsWith(href)) {
-            var li = el.getParent();
+            var li = this.getParent()[0];
             while (li && li.getTag() != parentTag) {
                 li = li.getParent();
             }
@@ -59,8 +59,8 @@ function magicLinks(selector, parentTag, apply) {
 
 /** Table stripes. Odd/even colors for rows. */
 function stripeTable(selector) {
-    $ES(selector).each(function(table) {
-       var rows = $ES('tr', table);
+    $(selector).each(function(table) {
+       var rows = ('tr', table);
        var odd = true;
        for (var i = 0; i < rows.length; i++) {
            rows[i].addClass(odd ? 'odd' : 'even');
@@ -74,22 +74,51 @@ window.addEvent('domready', function() {
     magicLinks('#menu a', 'li', function(li) {
         li.addClass('active');
     });
-    $ES('.focus-on-load').each(function(el) {
-        el.focus();
+    $('.focus-on-load').each(function(el) {
+        this.focus();
     });
-    $ES('input.select-all').each(function(el) {
-        el.addEvent('click', function(ev) {
-            ev = new Event(ev);
-            var target = $(ev.target);
+    $('input.select-all').each(function(el) {
+        this.addEvent('click', function(ev) {
+            /*ev = new Event(ev);*/
+            var target = this;
             var checked = target.checked;
             while (target != null && target.getTag() != 'table') {
-                target = target.getParent();
+                target = target.getParent()[0];
             }
             if (target != null) {
-                $ES('td input', target).each(function(input) {
+                $('td input', target).each(function(input) {
                     if (input.getProperty('type').toLowerCase() == 'checkbox') {
-                        input.checked = checked;
+                        this = checked;
                     }
+                });
+            }
+        });
+    });
+    
+    $('input.select-all2').each(function(el) {
+        this.addEvent('click', function(ev) {
+            ev = new Event(ev);
+            var thobj = this;
+            while (thobj != null && thobj.getTag() != 'th') {
+                thobj = thobj.getParent()[0];
+            }
+            
+            var i = 0;
+            while (thobj.getTag != null && thobj.getTag() == 'th') {
+                thobj = thobj.getPrevious()[0];
+                i++;
+            }
+            var query = "tr td:nth-child(" + i + ") input:checkbox";
+            
+            var target = this;
+            var checked = target.checked;
+            while (target != null && target.getTag() != 'table') {
+                target = target.getParent()[0];
+            }
+            
+            if (target != null) {
+                $(query, target).each(function(input) {
+                    this.checked = checked;
                 });
             }
         });

@@ -154,7 +154,7 @@
             <asp:WizardStep runat="server" ID="viewPlannedCourses">
                 <h2>Upload Employees (continued)</h2>
                 
-                <p id="p1" class="success" runat="server" visible="false">If you are planing
+                <p class="success">If you are planing
                 to register your employees at Atrendia's courses, please note it below.
                 This information will help Atrendia understand your needs better and create a 
                 more personalized plan for your company.</p>
@@ -166,7 +166,7 @@
             
             <asp:WizardStep runat="server" ID="viewFinnish">
                 <h2>Upload Employees (finished)</h2>
-                <p id="p2" class="success" runat="server" visible="false">
+                <p class="success">
                     All the information has been saved succesfully. You can return to  
                         <a href="~/Default.aspx">the main site</a> or 
                         <a href="Default.aspx">another list of contacts.</a>

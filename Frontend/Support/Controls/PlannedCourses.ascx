@@ -9,7 +9,7 @@
                 <asp:Repeater runat="server" ID="rptTableHeader" OnItemDataBound="rptrTableHeader_ItemDataBound">
                     <ItemTemplate>
                         <th><asp:Literal runat="server" ID="ltProductTitle" /> <br />
-                        <asp:CheckBox runat="server" ID="cbProductTitle" /></th>
+                        <input class="select-all2" type="checkbox"/></th>
                     </ItemTemplate>
                 </asp:Repeater>
             </tr>
