@@ -48,9 +48,9 @@ function magicLinks(selector, parentTag, apply) {
         var href = this.getAttribute('href');
         parentTag = parentTag.toLowerCase();
         if (current.startsWith(href)) {
-            var li = this.getParent()[0];
-            while (li && li.getTag() != parentTag) {
-                li = li.getParent();
+            var li = this.parentNode;
+            while (li && li.nodeName.toLowerCase() != parentTag) {
+                li = li.parentNode;
             }
             apply(li);
         }
@@ -69,10 +69,17 @@ function stripeTable(selector) {
     });
 }
 
+function getPreviousElementSibling(node){
+    var e = node.previousSibling;
+    while(e && e.nodeType !== 1)
+        e = e.previousSibling;
+    return e;
+}
+
 /** Initialization. */
 window.addEvent('domready', function() {
     magicLinks('#menu a', 'li', function(li) {
-        li.addClass('active');
+        li.setAttribute("class", "active");
     });
     $('.focus-on-load').each(function(el) {
         this.focus();
@@ -83,12 +90,12 @@ window.addEvent('domready', function() {
             /*ev = new Event(ev);*/
             var target = this;
             var checked = target.checked;
-            while (target != null && target.getTag() != 'table') {
-                target = target.getParent()[0];
+            while (target != null && target.nodeName.toLowerCase() != 'table') {
+                target = target.parentNode;
             }
             if (target != null) {
                 $('td input', target).each(function(input) {
-                    if (this.getProperty('type').toLowerCase() == 'checkbox') {
+                    if (this.getAttribute('type').toLowerCase() == 'checkbox') {
                         this.checked = checked;
                     }
                 });
@@ -101,21 +108,21 @@ window.addEvent('domready', function() {
         /*this.addEvent('click', function(ev) {*/
             ev = new Event(ev);
             var thobj = this;
-            while (thobj != null && thobj.getTag() != 'th') {
-                thobj = thobj.getParent()[0];
+            while (thobj != null && thobj.nodeName.toLowerCase() != 'th') {
+                thobj = thobj.parentNode;
             }
             
             var i = 0;
-            while (thobj.getTag != null && thobj.getTag() == 'th') {
-                thobj = thobj.getPrevious()[0];
+            while (thobj != null && thobj.nodeName.toLowerCase() == 'th') {
+                thobj = getPreviousElementSibling(thobj);
                 i++;
             }
             var query = "tr td:nth-child(" + i + ") input:checkbox";
             
             var target = this;
             var checked = target.checked;
-            while (target != null && target.getTag() != 'table') {
-                target = target.getParent()[0];
+            while (target != null && target.nodeName.toLowerCase()!= 'table') {
+                target = target.parentNode;
             }
             
             if (target != null) {
