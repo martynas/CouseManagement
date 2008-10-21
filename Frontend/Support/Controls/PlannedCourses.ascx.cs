@@ -53,8 +53,11 @@ namespace Atrendia.CourseManagement.Frontend.Support.Controls
 
         public void UpdateControl()
         {
-            rptTable.DataSource = Contacts;
-            rptTable.DataBind();
+            if (contacts != null && contacts.Count > 0)
+            {
+                rptTable.DataSource = Contacts;
+                rptTable.DataBind();
+            }
         }
 
         private IList<Contact2ProductGroup> GetContactPGInfo(Logic.Entities.Contact contact)

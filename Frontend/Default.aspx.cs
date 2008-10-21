@@ -15,7 +15,7 @@ namespace Atrendia.CourseManagement.Frontend
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Response.Redirect("~/Overview/Default.aspx");
+            Response.Redirect("~/People/Default.aspx");
         }
     }
 }

@@ -45,7 +45,7 @@ Element.extend({
 function magicLinks(selector, parentTag, apply) {
     var current = window.location.pathname;
     $(selector).each(function (el) {
-        var href = this.getProperty('href');
+        var href = this.getAttribute('href');
         parentTag = parentTag.toLowerCase();
         if (current.startsWith(href)) {
             var li = this.getParent()[0];
@@ -78,7 +78,8 @@ window.addEvent('domready', function() {
         this.focus();
     });
     $('input.select-all').each(function(el) {
-        this.addEvent('click', function(ev) {
+        this.onclick = function(ev) {
+        /*this.addEvent('click', function(ev) {*/
             /*ev = new Event(ev);*/
             var target = this;
             var checked = target.checked;
@@ -87,16 +88,17 @@ window.addEvent('domready', function() {
             }
             if (target != null) {
                 $('td input', target).each(function(input) {
-                    if (input.getProperty('type').toLowerCase() == 'checkbox') {
-                        this = checked;
+                    if (this.getProperty('type').toLowerCase() == 'checkbox') {
+                        this.checked = checked;
                     }
                 });
             }
-        });
+        };
     });
     
     $('input.select-all2').each(function(el) {
-        this.addEvent('click', function(ev) {
+        this.onclick = function(ev) {
+        /*this.addEvent('click', function(ev) {*/
             ev = new Event(ev);
             var thobj = this;
             while (thobj != null && thobj.getTag() != 'th') {
@@ -121,6 +123,6 @@ window.addEvent('domready', function() {
                     this.checked = checked;
                 });
             }
-        });
+        };
     });
 });

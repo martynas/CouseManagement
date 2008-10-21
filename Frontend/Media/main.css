@@ -11,6 +11,12 @@
     margin: 0;
     padding: 0;
 }
+
+a img 
+{
+	text-decoration: none;
+}
+
 body, td, th {
     font-family: helvetica, arial, sans-serif;
     font-size: 13px;
@@ -68,6 +74,11 @@ body {
     margin: 80px 20px 50px 320px;
 }
 
+#mcontent 
+{
+    margin-right: 250px;
+}
+
 /* Sidebar. */
 #sidebar {
     position: absolute;
@@ -92,6 +103,23 @@ body {
     border: 1px solid #dedede;
 }
 
+/* Horizontal list */
+div.hlist ul 
+{
+	list-style-type: none;
+}
+
+div.hlist ul li 
+{
+	display: inline;
+	padding-right: 3px;
+}
+
+div.hlist ul li a 
+{
+	font-size: x-small;
+}
+
 /* Menu. */
 #menu ul {
     list-style-type: none;
@@ -108,6 +136,35 @@ body {
     margin-left: 20px;
 }
 #menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Vertical Menu. */
+#hmenu 
+{
+	display: block;
+	padding: 8px 0 8px 0;
+}
+
+#hmenu ul {
+    list-style-type: none;
+    display: inline;
+}
+#hmenu li 
+{
+	display: inline;
+}
+#hmenu li a, #hmenu li.active li a 
+{
+	padding: 8px;
+    background: url(menu_inactive_grad.gif) no-repeat left center;
+}
+#hmenu li.active a, #hmenu a:hover 
+{
+    background: url(menu_active_grad.gif) no-repeat left center;
+}
+#hmenu li a {
     color: #fff;
     text-decoration: none;
 }
@@ -165,10 +222,11 @@ a:hover {
 }
 
 /* Tables. */
-table.data {
+table.data 
+{
     border-collapse: collapse;
     border-bottom: 1px solid #03345f;
-    margin: 5px 0;
+    margin: 0 0 5px;
 }
 table.data th {
     padding: 10px 10px;
@@ -182,6 +240,23 @@ table.data td {
 }
 table.data tr.odd td {
     background: #d8d8d8;
+}
+
+table.data2 {
+    border-collapse: collapse;
+	width: 100%;
+    margin: 5px 0;
+}
+table.data2 th 
+{
+    text-align: center;
+    border-bottom: 1px solid #03345f;
+}
+table.data2 td {
+
+}
+table.data2 tr.odd td {
+
 }
 
 /* Forms. */

@@ -44,8 +44,8 @@
                         <LoggedInTemplate>
                             <ul>
                                 <!-- Must have absolute URLs here hence ResolveUrl -->
-                                <li><a href="<%= ResolveUrl("~/Overview/") %>">Overview</a></li>
-                                <li><a href="<%= ResolveUrl("~/Calendar/") %>">Training sessions</a></li>
+                                <!--<li><a href="<%= ResolveUrl("~/Overview/") %>">Overview</a></li>
+                                <li><a href="<%= ResolveUrl("~/Calendar/") %>">Training sessions</a></li> -->
                                 <li>
                                     <a href="<%= ResolveUrl("~/People/Default.aspx") %>">People</a>
                                     <ul>

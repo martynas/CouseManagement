@@ -2,6 +2,7 @@
     Inherits="Atrendia.CourseManagement.TrainerFrontend.Profile.Default"
     MasterPageFile="~/Support/Global.Master" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="Title" runat="server">Profile</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="Calendar" runat="server" />
 <asp:Content ID="Content2" ContentPlaceHolderID="Content" runat="server">
     <h2>Profile</h2>
     <p>Here you can check you personal information and change password.</p>

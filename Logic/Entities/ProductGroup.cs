@@ -20,11 +20,5 @@ namespace Atrendia.CourseManagement.Logic.Entities
             internal set { heading = value; }
         }
 
-        public string Code
-        {
-            get { return code; }
-            internal set { code = value; }
-        }
-
     }
 }

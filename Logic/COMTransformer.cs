@@ -81,7 +81,6 @@ namespace Atrendia.CourseManagement.Logic
         {
             pg.Id = cdm.Id;
             pg.Heading = (string)cdm.get_Attrib("heading", false);
-            pg.Code = (string)cdm.get_Attrib("code", false);
             return pg;
         }
 

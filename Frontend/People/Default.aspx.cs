@@ -47,17 +47,6 @@ namespace Atrendia.CourseManagement.Frontend.People
             }
         }
 
-        private void LoadContacts()
-        {
-            List<Logic.Entities.Contact> contacts;
-            contacts = Endpoint.GetContactsByCompanyId(CurrentCompany.Id);
-            if (contacts.Count > 0)
-            {
-                rptrContacts.DataSource = contacts;
-                rptrContacts.DataBind();
-            }
-        }
-
         protected void Page_PreRender(object sender, EventArgs e)
         {
             if (Session["PeopleUploadInfo"] != null)
@@ -71,6 +60,35 @@ namespace Atrendia.CourseManagement.Frontend.People
             {
                 pInfoUpload.Visible = false;
                 pHelpUpload.Visible = true;
+            }
+        }
+
+        #region Event Handling
+        protected void lbContacts_Click(object sender, EventArgs e)
+        {
+            mvContacts.SetActiveView(viewDetails);
+            liCourses.Attributes.Add( "class", "" );
+            liContacts.Attributes.Add("class", "active");
+        }
+
+        protected void lbCourses_Click(object sender, EventArgs e)
+        {
+            mvContacts.SetActiveView(viewCourses);
+            liCourses.Attributes.Add("class", "active");
+            liContacts.Attributes.Add("class", "");
+            LoadCoursePanning();
+        }
+        #endregion
+
+        #region Contacts details
+        private void LoadContacts()
+        {
+            List<Logic.Entities.Contact> contacts;
+            contacts = Endpoint.GetContactsByCompanyId(CurrentCompany.Id);
+            if (contacts.Count > 0)
+            {
+                rptrContacts.DataSource = contacts;
+                rptrContacts.DataBind();
             }
         }
 
@@ -120,5 +138,13 @@ namespace Atrendia.CourseManagement.Frontend.People
                 LoadContacts();
             }
         }
+        #endregion
+
+        #region Course Planning
+        private void LoadCoursePanning()
+        {
+            cpCoursePlanning.Contacts = Endpoint.GetContactsByCompanyId(CurrentCompany.Id);
+        }
+        #endregion
     }
 }

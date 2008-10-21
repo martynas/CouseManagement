@@ -163,7 +163,7 @@ namespace Atrendia.CourseManagement.Logic
         /// </summary>
         private LWM.Class ClassSTDProductGroup
         {
-            get { return GetClass("STDProductGroup"); }
+            get { return GetClass("TrainingContent"); }
         }
         #endregion
 
@@ -1088,7 +1088,7 @@ namespace Atrendia.CourseManagement.Logic
         {
             VirtualEntities.Contact2ProductGroups c2pg = new VirtualEntities.Contact2ProductGroups(contact);
             LWM.List query = ClassParticipantCourse.NewList();
-            query.AddWherePart("primaryProductGroup", null, "is not");
+            query.AddWherePart("primaryTrainingContent", null, "is not");
             query.AddWherePart("pimaryPart", contact, "=");
             query.AddWherePart("primaryAct", null, "is");
             query.ShowDeleted = false;
@@ -1098,7 +1098,7 @@ namespace Atrendia.CourseManagement.Logic
             {
                 LWM.CDMObject cdm = query.GetObject();
 
-                Entities.ProductGroup pg = transformer.Load(cdm.get_Relation("primaryProductGroup"),
+                Entities.ProductGroup pg = transformer.Load(cdm.get_Relation("primaryTrainingContent"),
                     new Entities.ProductGroup());
                 c2pg.ProductGroups.Add(pg);
 
@@ -1123,7 +1123,7 @@ namespace Atrendia.CourseManagement.Logic
 
             // Deleting old Contact2ProductGroup relations for the contact
             LWM.List query = ClassParticipantCourse.NewList();
-            query.AddWherePart("primaryProductGroup", null, "is not");
+            query.AddWherePart("primaryTrainingContent", null, "is not");
             query.AddWherePart("pimaryPart", c2pg.Contact.Id, "=");
             query.AddWherePart("primaryAct", null, "is");
             query.ShowDeleted = false;
@@ -1132,7 +1132,7 @@ namespace Atrendia.CourseManagement.Logic
             while (!query.EOF)
             {
                 LWM.CDMObject cdm = query.GetObject();
-                string pgId = (string)cdm.get_Attrib("primaryProductGroup", false);
+                string pgId = (string)cdm.get_Attrib("primaryTrainingContent", false);
                 if (pgMap.ContainsKey(pgId))
                 {
                     pgMap.Remove(pgId);
@@ -1149,7 +1149,7 @@ namespace Atrendia.CourseManagement.Logic
             foreach (string pgId in pgMap.Keys)
             {
                 LWM.CDMObject cdm = ClassParticipantCourse.NewObject();
-                COMTransformer.CDMSet(cdm, "primaryProductGroup", pgId);
+                COMTransformer.CDMSet(cdm, "primaryTrainingContent", pgId);
                 COMTransformer.CDMSet(cdm, "pimaryPart", c2pg.Contact.Id);
                 cdm.Update();
             }
