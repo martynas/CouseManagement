@@ -146,6 +146,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Support\Controls\PlannedCourses.ascx.cs">
+      <DependentUpon>PlannedCourses.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Support\Controls\PlannedCourses.ascx.designer.cs">
+      <DependentUpon>PlannedCourses.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Support\Controls\TrainingActivityHeading.ascx.cs">
       <DependentUpon>TrainingActivityHeading.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -264,6 +271,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Media\Contacts_Example.csv" />
+    <Content Include="Support\Controls\PlannedCourses.ascx" />
     <Content Include="Support\Controls\TrainingActivityHeading.ascx" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

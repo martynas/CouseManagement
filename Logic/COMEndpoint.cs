@@ -157,6 +157,14 @@ namespace Atrendia.CourseManagement.Logic
         {
             get { return GetClass("CDMSecurityRole2User"); }
         }
+
+        /// <summary>
+        /// LWM class that represents STDProductGroup.
+        /// </summary>
+        private LWM.Class ClassSTDProductGroup
+        {
+            get { return GetClass("CDMSTDProductGroup"); }
+        }
         #endregion
 
         #region IDisposable Members
@@ -996,6 +1004,29 @@ namespace Atrendia.CourseManagement.Logic
             cdm.Update();
         }
 
+        #endregion
+
+        #region Courses, Products and Modules
+        public IList<Entities.ProductGroup> GetAllProductGroups()
+        {
+            List<Entities.ProductGroup> pgs = new List<Entities.ProductGroup>();
+            LWM.List query = ClassSTDProductGroup.NewList();
+            query.ShowDeleted = false;
+            query.Query(true);
+            while (!query.EOF)
+            {
+                LWM.CDMObject cdm = query.GetObject();
+                // This works against deleted items as well
+                Entities.ProductGroup pg = transformer.Load(cdm, new Entities.ProductGroup());
+                if (pg != null)
+                {
+                    // TODO: leave courses only
+                    pgs.Add(pg);
+                }
+                query.MoveNext();
+            }
+            return pgs;
+        }
         #endregion
     }
 }

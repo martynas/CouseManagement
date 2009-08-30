@@ -58,6 +58,10 @@ namespace Atrendia.CourseManagement.Logic
         List<Entities.Activity> GetActivitiesForParticipant(Entities.Contact contact);
         void UpdateTrainingLocation(Entities.Activity activity, string trainingLocation);
         #endregion
+
+        #region Courses, Products and Modules
+        IList<Entities.ProductGroup> GetAllProductGroups();
+        #endregion
     }
 
     public class ContactRoles

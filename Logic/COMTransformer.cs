@@ -77,6 +77,14 @@ namespace Atrendia.CourseManagement.Logic
             return user;
         }
 
+        public Entities.ProductGroup Load(LWM.CDMObject cdm, Entities.ProductGroup pg)
+        {
+            pg.Id = cdm.Id;
+            pg.Heading = (string)cdm.get_Attrib("heading", false);
+            pg.Code = (string)cdm.get_Attrib("code", false);
+            return pg;
+        }
+
         public Entities.Activity Load(LWM.CDMObject cdm, Entities.Activity activity)
         {
             activity.Id = cdm.Id;

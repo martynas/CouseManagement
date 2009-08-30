@@ -61,6 +61,7 @@
     <Compile Include="Entities\Company.cs" />
     <Compile Include="Entities\Contact.cs" />
     <Compile Include="Entities\DeliveryPackage.cs" />
+    <Compile Include="Entities\ProductGroup.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Exceptions.cs" />
     <Compile Include="IEndpoint.cs" />
