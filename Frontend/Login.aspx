@@ -5,6 +5,11 @@
         <li class="active"><a href="~/Login.aspx" runat="server">Login</a></li>
     </ul>
 </asp:Content>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="Calendar" runat="server">
+    <!-- Look ma, no calendar. -->
+</asp:Content>
+
 <asp:Content ContentPlaceHolderID="Content" runat="server">
     
     <h2>Welcome to Atrendia Course Administration</h2>

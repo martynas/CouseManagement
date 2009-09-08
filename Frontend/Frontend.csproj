@@ -118,6 +118,7 @@
     <Compile Include="Support\BaseUserControl.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Support\Constants.cs" />
     <Compile Include="Support\Controls\AccountManager.ascx.cs">
       <DependentUpon>AccountManager.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

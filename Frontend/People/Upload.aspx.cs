@@ -13,13 +13,8 @@ using System.Text.RegularExpressions;
 
 namespace Atrendia.CourseManagement.Frontend.People
 {
-    public partial class Upload : Support.BaseUserControl
+    public partial class Upload : Support.BasePage
     {
-        enum ViewMode
-        {
-            Initial,
-            Review
-        };
 
         enum ParseResultMode
         {
@@ -27,22 +22,6 @@ namespace Atrendia.CourseManagement.Frontend.People
             Warnings,
             NoData
         };
-
-        /// <summary>
-        /// View mode -- import window or review results.
-        /// </summary>
-        private ViewMode Mode
-        {
-            get
-            {
-                return pnlInitial.Visible ? ViewMode.Initial : ViewMode.Review;
-            }
-            set
-            {
-                pnlInitial.Visible = value == ViewMode.Initial;
-                pnlReview.Visible = !pnlInitial.Visible;
-            }
-        }
 
         /// <summary>
         /// Parse result mode.
@@ -76,7 +55,7 @@ namespace Atrendia.CourseManagement.Frontend.People
         {
             if (fuContacts.HasFile)
             {
-                Mode = ViewMode.Review;
+                mvImportWizard.ActiveStepIndex ++;
                 using (Helpers.ContactFileParser parser =
                        new Helpers.ContactFileParser(fuContacts.FileContent))
                 {
@@ -107,7 +86,6 @@ namespace Atrendia.CourseManagement.Frontend.People
             }
             else
             {
-                Mode = ViewMode.Initial;
                 pNoFile.Visible = true;
             }
         }
@@ -116,7 +94,7 @@ namespace Atrendia.CourseManagement.Frontend.People
         private Regex patternEmail = new Regex(@"^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$",
             RegexOptions.IgnoreCase);
 
-        private bool ValidateContacts(out List<Logic.Entities.Contact> list)
+        private bool ValidateContacts(out IList<Logic.Entities.Contact> list)
         {
             bool allValid = true;
             list = new List<Logic.Entities.Contact>();
@@ -177,11 +155,17 @@ namespace Atrendia.CourseManagement.Frontend.People
         protected void btnConfirm_Click(object sender, EventArgs e)
         {
             ParseMode = null;
-            List<Logic.Entities.Contact> contacts;
+            IList<Logic.Entities.Contact> contacts;
             int alreadyExist = 0;
             if (ValidateContacts(out contacts))
             {
-                List<Logic.Entities.Contact> toAdd = new List<Logic.Entities.Contact>();
+                IList<Logic.Entities.Contact> toAdd = new List<Logic.Entities.Contact>();
+                IList<Logic.Entities.Contact> resolved = new List<Logic.Entities.Contact>();
+                Endpoint.ResolveContactIdByEmail(CurrentCompany, ref contacts, out resolved, out toAdd);
+
+                alreadyExist = resolved.Count;
+
+                /*
                 foreach (Logic.Entities.Contact contact in contacts)
                 {
                     Logic.Entities.Contact current = Endpoint.GetContactByEmail(contact.Email, CurrentCompany);
@@ -193,10 +177,17 @@ namespace Atrendia.CourseManagement.Frontend.People
                     {
                         toAdd.Add(contact);
                     }
-                }
+                }*/
+
                 if (toAdd.Count > 0)
                 {
                     Endpoint.AddContactsToCompany(CurrentCompany, toAdd);
+
+                    // Concatinating new list of contacts with all of them having CDM IDs
+                    List<Logic.Entities.Contact> c = new List<Logic.Entities.Contact>();
+                    c.AddRange(toAdd);
+                    c.AddRange(resolved);
+                    contacts = c;
                 }
                 if (toAdd.Count + alreadyExist > 0)
                 {
@@ -207,15 +198,18 @@ namespace Atrendia.CourseManagement.Frontend.People
                             "were already in our database and were not modified.",
                             alreadyExist);
                     }
-                    Session["PeopleUploadInfo"] = message; 
+                    Session[Support.Constants.Session.PeopleUploadInfo] = message; 
                 }
-                Response.Redirect("~/People/Default.aspx");
+                //Response.Redirect("~/People/Default.aspx");
+
+                InitializeCoursePlanningView(contacts);
+                mvImportWizard.ActiveStepIndex++;
             }
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/People/Upload.aspx");
+            Response.Redirect(Support.Constants.Pages.PeopleUpload);
         }
 
         protected void rptrWarnings_ItemDataBound(object sender, RepeaterItemEventArgs e)
@@ -249,5 +243,28 @@ namespace Atrendia.CourseManagement.Frontend.People
                 tbPhone.Text = contact.MobilePhone;
             }
         }
+
+        /// <summary>
+        /// Handing of Confirmation of planned Courses
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void btnPlannedCoursesConfirm_Click(object sender, EventArgs e)
+        {
+            IList<Logic.VirtualEntities.Contact2ProductGroups> c2pgInfo;
+            if (cpCoursePlanning.ValidatePGInfo(out c2pgInfo))
+            {
+                Endpoint.UpdateContact2ProductGroups(c2pgInfo);
+                Session[Support.Constants.Session.PeopleUploadInfo] = "Contacts were added successfully";
+                Response.Redirect(Support.Constants.Pages.PeopleUpload);
+            }
+        }
+
+        #region Initialization of Views
+        protected void InitializeCoursePlanningView(IList<Logic.Entities.Contact> contacts)
+        {
+            cpCoursePlanning.Contacts = contacts;
+        }
+        #endregion
     }
 }

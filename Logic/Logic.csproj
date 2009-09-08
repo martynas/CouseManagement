@@ -66,6 +66,7 @@
     <Compile Include="Exceptions.cs" />
     <Compile Include="IEndpoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VirtualEntities\Contact2ProductGroups.cs" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="ADODB">

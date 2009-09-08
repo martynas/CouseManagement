@@ -22,13 +22,15 @@ namespace Atrendia.CourseManagement.Logic
         void UpdateContact(Entities.Contact contact);
         void DeleteContacts(List<Entities.Contact> contacts);
         List<Entities.Contact> GetContactsInRole(string roleCode);
+        void ResolveContactIdByEmail(Entities.Company company, ref IList<Entities.Contact> Contacts,
+            out IList<Entities.Contact> Resolved, out IList<Entities.Contact> NotResolved);
         #endregion
 
         #region Company
         Entities.Company GetCompanyById(string id);
         Entities.Company GetCompanyByContactId(string contactId);
         Entities.User GetAccountManagerByCompanyId(string companyId);
-        void AddContactsToCompany(Entities.Company company, List<Entities.Contact> contacts);
+        void AddContactsToCompany(Entities.Company company, IList<Entities.Contact> contacts);
         #endregion
 
         #region Delivery package
@@ -61,6 +63,8 @@ namespace Atrendia.CourseManagement.Logic
 
         #region Courses, Products and Modules
         IList<Entities.ProductGroup> GetAllProductGroups();
+        void UpdateContact2ProductGroups(VirtualEntities.Contact2ProductGroups c2pg);
+        void UpdateContact2ProductGroups(IList<VirtualEntities.Contact2ProductGroups> c2pgInfo);
         #endregion
     }
 

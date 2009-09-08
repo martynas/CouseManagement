@@ -14,13 +14,22 @@ namespace Atrendia.CourseManagement.Frontend.People {
     public partial class Upload {
         
         /// <summary>
-        /// pnlInitial control.
+        /// mvImportWizard control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlInitial;
+        protected global::System.Web.UI.WebControls.Wizard mvImportWizard;
+        
+        /// <summary>
+        /// viewInitial control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.WizardStep viewInitial;
         
         /// <summary>
         /// pNoFile control.
@@ -50,13 +59,13 @@ namespace Atrendia.CourseManagement.Frontend.People {
         protected global::System.Web.UI.WebControls.Button btnUpload;
         
         /// <summary>
-        /// pnlReview control.
+        /// viewReview control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlReview;
+        protected global::System.Web.UI.WebControls.WizardStep viewReview;
         
         /// <summary>
         /// pParseSuccess control.
@@ -111,5 +120,32 @@ namespace Atrendia.CourseManagement.Frontend.People {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptrWarnings;
+        
+        /// <summary>
+        /// viewPlannedCourses control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.WizardStep viewPlannedCourses;
+        
+        /// <summary>
+        /// cpCoursePlanning control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Atrendia.CourseManagement.Frontend.Support.Controls.PlannedCourses cpCoursePlanning;
+        
+        /// <summary>
+        /// btnPlannedCoursesConfirm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnPlannedCoursesConfirm;
     }
 }

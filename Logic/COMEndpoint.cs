@@ -163,7 +163,7 @@ namespace Atrendia.CourseManagement.Logic
         /// </summary>
         private LWM.Class ClassSTDProductGroup
         {
-            get { return GetClass("CDMSTDProductGroup"); }
+            get { return GetClass("STDProductGroup"); }
         }
         #endregion
 
@@ -216,6 +216,38 @@ namespace Atrendia.CourseManagement.Logic
                     );
             }
             return cdm != null ? transformer.Load(cdm, new Entities.Contact()) : null;
+        }
+
+
+        /// <summary>
+        /// Tries to resolve Contacts by their Emails
+        /// </summary>
+        /// <param name="Contacts"></param>
+        /// <param name="Resolved"></param>
+        /// <param name="NotResolved"></param>
+        public void ResolveContactIdByEmail(Entities.Company company, ref IList<Entities.Contact> Contacts,
+            out IList<Entities.Contact> Resolved, out IList<Entities.Contact> NotResolved)
+        {
+            Resolved = new List<Entities.Contact>();
+            NotResolved = new List<Entities.Contact>();
+            List<Entities.Contact> all = new List<Entities.Contact>();
+
+            foreach (Entities.Contact c in Contacts)
+            {
+                Entities.Contact cdm = GetContactByEmail(c.Email, company);
+                if (cdm != null)
+                {
+                    all.Add(cdm);
+                    Resolved.Add(cdm);
+                }
+                else
+                {
+                    all.Add(c);
+                    NotResolved.Add(c);
+                }
+            }
+
+            Contacts = all;
         }
 
         /// <summary>
@@ -306,7 +338,7 @@ namespace Atrendia.CourseManagement.Logic
         /// </summary>
         /// <param name="company"></param>
         /// <param name="contacts"></param>
-        public void AddContactsToCompany(Entities.Company company, List<Entities.Contact> contacts)
+        public void AddContactsToCompany(Entities.Company company, IList<Entities.Contact> contacts)
         {
             LWM.CDMObject cdmCompany = ClassCompany.LoadObject(company.Id, true);
             bool success = true;
@@ -1026,6 +1058,110 @@ namespace Atrendia.CourseManagement.Logic
                 query.MoveNext();
             }
             return pgs;
+        }
+
+        /// <summary>
+        /// Return ProductGroup object by its ID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Entities.ProductGroup GetProductGroupById(string id)
+        {
+            LWM.List query = ClassSTDProductGroup.NewList();
+            query.AddWherePart("id", id, "=");
+            query.ShowDeleted = false;
+            query.Query(true);
+            if (!query.EOF)
+            {
+                return transformer.Load(query.GetObject(), new Entities.ProductGroup());
+            }
+            else
+                return null;
+        }
+
+        /// <summary>
+        /// Returns a list of courses (ProductGroups) which a contact is willing to take
+        /// </summary>
+        /// <param name="contact"></param>
+        /// <returns>List of courses</returns>
+        public VirtualEntities.Contact2ProductGroups GetContact2ProductGroups(Entities.Contact contact)
+        {
+            VirtualEntities.Contact2ProductGroups c2pg = new VirtualEntities.Contact2ProductGroups(contact);
+            LWM.List query = ClassParticipantCourse.NewList();
+            query.AddWherePart("primaryProductGroup", null, "is not");
+            query.AddWherePart("pimaryPart", contact, "=");
+            query.AddWherePart("primaryAct", null, "is");
+            query.ShowDeleted = false;
+            query.Query(true);
+
+            while (!query.EOF)
+            {
+                LWM.CDMObject cdm = query.GetObject();
+
+                Entities.ProductGroup pg = transformer.Load(cdm.get_Relation("primaryProductGroup"),
+                    new Entities.ProductGroup());
+                c2pg.ProductGroups.Add(pg);
+
+                query.MoveNext();
+            }
+
+            return c2pg;
+        }
+
+
+        /// <summary>
+        /// Updates list of courses which a contact is willing to take
+        /// </summary>
+        /// <param name="c2pg"></param>
+        public void UpdateContact2ProductGroups(VirtualEntities.Contact2ProductGroups c2pg)
+        {
+            Dictionary<string, Entities.ProductGroup> pgMap = new Dictionary<string, Entities.ProductGroup>();
+            foreach (Entities.ProductGroup pg in c2pg.ProductGroups)
+            {
+                pgMap.Add(pg.Id, pg);
+            }
+
+            // Deleting old Contact2ProductGroup relations for the contact
+            LWM.List query = ClassParticipantCourse.NewList();
+            query.AddWherePart("primaryProductGroup", null, "is not");
+            query.AddWherePart("pimaryPart", c2pg.Contact.Id, "=");
+            query.AddWherePart("primaryAct", null, "is");
+            query.ShowDeleted = false;
+            query.Query(true);
+
+            while (!query.EOF)
+            {
+                LWM.CDMObject cdm = query.GetObject();
+                string pgId = (string)cdm.get_Attrib("primaryProductGroup", false);
+                if (pgMap.ContainsKey(pgId))
+                {
+                    pgMap.Remove(pgId);
+                }
+                else
+                {
+                    // If the contact is no longer wishing to take the Course, the relation is removed
+                    cdm.Delete();
+                }
+                query.MoveNext();
+            }
+
+            // Creating new relations
+            foreach (string pgId in pgMap.Keys)
+            {
+                LWM.CDMObject cdm = ClassParticipantCourse.NewObject();
+                COMTransformer.CDMSet(cdm, "primaryProductGroup", pgId);
+                COMTransformer.CDMSet(cdm, "pimaryPart", c2pg.Contact.Id);
+                cdm.Update();
+            }
+
+        }
+
+        public void UpdateContact2ProductGroups(IList<VirtualEntities.Contact2ProductGroups> c2pgInfo)
+        {
+            foreach (VirtualEntities.Contact2ProductGroups c2pg in c2pgInfo)
+            {
+                UpdateContact2ProductGroups(c2pg);
+            }
         }
         #endregion
     }
