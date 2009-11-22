@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Upload.aspx.cs" Inherits="Atrendia.CourseManagement.Frontend.People.Upload" MasterPageFile="~/Support/Global.Master" %>
 <%@ Register Src="~/Support/Controls/PlannedCourses.ascx" TagName="PlannedCouses" TagPrefix="cm" %> 
 
-<asp:Content ContentPlaceHolderID="Title" runat="server">Atrendia: Upload People</asp:Content>
+<asp:Content ContentPlaceHolderID="Title" runat="server">Atrendia: Upload Participants</asp:Content>
 <asp:Content ContentPlaceHolderID="Calendar" runat="server">
     <!-- Look ma, no calendar. -->
 </asp:Content>
@@ -14,28 +14,23 @@
         <WizardSteps>
             <asp:WizardStep ID="viewInitial" runat="server">
             
-                <h2>Upload Employees</h2>
+                <h2>Upload Participants</h2>
                 <p class="help-suggestion without-calendar">Follow the step-by-step guide to upload more employees
-                    to the training administration site. After upload,
-                    these employees might be assigned to training dates.</p>
+                    to the training administration site. </p>
                     
                 <h3 class="top-marginized">1. Download template file</h3>
-                <p>Download the example file to your computer. The file
-                    shows you what structure you must use for the data
-                    to be imported.</p>
+                <p>Download the example Excel-sheet and save it on your desktop.</p>
                     
                 <p class="shifted">
                     <span class="excel-file"><a runat="server" href="~/Media/Contacts_Example.csv">Example file</a> (1 KB)</span> 
                 </p>
                 
                 <h3 class="top-marginized">2. Prepare file</h3>
-                <p>Use the example file as a starting point and fill
-                    it with relevant data.</p>
-                    
-                <p>Save the example file in CSV format.</p>
+                <p>Follow the column headings to fill the sheet in with data of the employees you want to upload. 
+                    The file is already in .csv-format. Save it as such.</p>
                 
                 <h3 class="top-marginized">3. Upload file</h3>
-                <p>Point to where you placed the CSV file:</p>
+                <p>Browse to the saved file: </p>
 
                 <p class="error" id="pNoFile" runat="server" visible="false">
                     No file was uploaded, please choose one.
@@ -56,16 +51,16 @@
             
             <asp:WizardStep ID="viewReview" runat="server">
             
-                <h2>Upload Employees (continued)</h2>
+                <h2>Upload Participants (continued)</h2>
 
-                <p id="pParseSuccess" class="success" runat="server" visible="false">You have successfully uploaded a
-                CSV file. We extracted the data that is presented below. Please take a minute
-                to review it.</p>
+                <p id="pParseSuccess" class="success" runat="server" visible="false">You have successfully uploaded the following participants. 
+                Please take a minute to review the data below and change them if necessary. 
+                When finished click "Confirm"</p>
 
                 <p id="pParseWarnings" class="success" runat="server" visible="false">You have successfully uploaded a
-                CSV file. We extracted the data that is presented below. Please take a minute
+                CSV file. Please take a minute
                 to review it. There were also some issues with the data that are explained
-                below the review table.</p>
+                below the review table, please fix them. When finished click "Confirm"</p>
 
                 <p id="pParseNoData" class="error" runat="server" visible="false">We were unable to
                 extract any data from the file you uploaded. 
@@ -120,7 +115,7 @@
                     <FooterTemplate>
                         </table>
                         <p>
-                            <asp:Button ID="btnConfirmBelow" runat="server" Text="Continue" 
+                            <asp:Button ID="btnConfirmBelow" runat="server" Text="Confirm" 
                                 onclick="btnConfirm_Click" />
                             <asp:Button ID="btnCancelBelow" runat="server" Text="Cancel" 
                                 onclick="btnCancel_Click" />
@@ -152,7 +147,7 @@
             </asp:WizardStep>
             
             <asp:WizardStep runat="server" ID="viewPlannedCourses">
-                <h2>Upload Employees (continued)</h2>
+                <h2>Upload Participants (continued)</h2>
                 
                 <p class="success">If you are planing
                 to register your employees at Atrendia's courses, please note it below.
@@ -165,7 +160,7 @@
             </asp:WizardStep>
             
             <asp:WizardStep runat="server" ID="viewFinnish">
-                <h2>Upload Employees (finished)</h2>
+                <h2>Upload Participants (finished)</h2>
                 <p class="success">
                     All the information has been saved succesfully. You can return to  
                         <a href="~/Default.aspx">the main site</a> or 

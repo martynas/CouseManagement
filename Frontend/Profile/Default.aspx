@@ -29,7 +29,7 @@
                     ValidationGroup="ChangePassword1">*</asp:RequiredFieldValidator>
             </p>
             <p>
-                <asp:Label ID="Label3" AssociatedControlID="ConfirmNewPassword" runat="server">New Password:</asp:Label>            
+                <asp:Label ID="Label3" AssociatedControlID="ConfirmNewPassword" runat="server">Repeat New Password:</asp:Label>            
                 <asp:TextBox ID="ConfirmNewPassword" runat="server" TextMode="Password" CssClass="text normal" />
                 <asp:RequiredFieldValidator ControlToValidate="ConfirmNewPassword" 
                     ErrorMessage="Password is required." ID="rfvConfirmNewPassword" 

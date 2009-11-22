@@ -54,8 +54,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="COMEndpoint.cs" />
-    <Compile Include="COMTransformer.cs" />
+    <Compile Include="COMEndpoint\COMEndpoint.cs" />
+    <Compile Include="COMEndpoint\COMTransformer.cs" />
+    <Compile Include="COMEndpoint\COMEndpointSecurity.cs" />
     <Compile Include="Entities\AbstractEntity.cs" />
     <Compile Include="Entities\Activity.cs" />
     <Compile Include="Entities\Company.cs" />

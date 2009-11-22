@@ -66,6 +66,10 @@ namespace Atrendia.CourseManagement.Logic
         void UpdateContact2ProductGroups(VirtualEntities.Contact2ProductGroups c2pg);
         void UpdateContact2ProductGroups(IList<VirtualEntities.Contact2ProductGroups> c2pgInfo);
         #endregion
+
+        #region Security & Access Rights
+        bool HasAccess(Entities.Contact user, Entities.Contact obj);
+        #endregion
     }
 
     public class ContactRoles

@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="View.aspx.cs" Inherits="Atrendia.CourseManagement.Frontend.People.View" MasterPageFile="~/Support/Global.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="View.aspx.cs" 
+    Inherits="Atrendia.CourseManagement.Frontend.People.View" MasterPageFile="~/Support/Global.Master" %>
 
 <asp:Content ContentPlaceHolderID="Title" runat="server">Atrendia: Person details</asp:Content>
 <asp:Content ContentPlaceHolderID="Calendar" runat="server"></asp:Content>
@@ -13,25 +14,33 @@
             <asp:Label ID="lblPhone" runat="server">+1 234 56789</asp:Label>
         </asp:PlaceHolder>
     </p>    
+    <p>
+        <asp:Button ID="btnEdit" runat="server" Text="Edit" OnClick="btnEdit_click" />
+    </p>
     
-    <asp:Panel ID="pnlNoTrainings" runat="server">
-        <p>This person has not attended a training yet.</p>
-    </asp:Panel>
+    <asp:MultiView ID="mvTrainings" runat="server" ActiveViewIndex=1>
+        <asp:View ID="pnlEmpty" runat="server">
+        </asp:View>
+           
+        <asp:View ID="pnlNoTrainings" runat="server" >
+            <p>This person has not attended a training yet.</p>
+        </asp:View>
     
-    <asp:Panel ID="pnlTrainings" runat="server" Visible="false">
-        <h3>Trainings</h3>
-        <p>The user is attending these trainings:</p>
-        
-        <asp:Repeater ID="rptrActivities" runat="server" 
-            onitemdatabound="rptrActivities_ItemDataBound">
-        <ItemTemplate>
-            <p><strong><asp:Label ID="lblDate" runat="server">Jan 10 2009</asp:Label></strong>
-               <asp:Label ID="lblTagCourse" runat="server" Visible="false" CssClass="tag training">training</asp:Label>
-               <asp:Label ID="lblTagPreparation" runat="server" Visible="false" CssClass="tag preparation">preparation</asp:Label>
-               <asp:HyperLink ID="hlTitle" runat="server">Activity title</asp:HyperLink></p>
-        </ItemTemplate>
-        </asp:Repeater>
-        
-    </asp:Panel>
+        <asp:View ID="pnlTrainings" runat="server">
+            <h3>Trainings</h3>
+            <p>The user is attending these trainings:</p>
+            
+            <asp:Repeater ID="rptrActivities" runat="server" 
+                onitemdatabound="rptrActivities_ItemDataBound">
+            <ItemTemplate>
+                <p><strong><asp:Label ID="lblDate" runat="server">Jan 10 2009</asp:Label></strong>
+                   <asp:Label ID="lblTagCourse" runat="server" Visible="false" CssClass="tag training">training</asp:Label>
+                   <asp:Label ID="lblTagPreparation" runat="server" Visible="false" CssClass="tag preparation">preparation</asp:Label>
+                   <asp:HyperLink ID="hlTitle" runat="server">Activity title</asp:HyperLink></p>
+            </ItemTemplate>
+            </asp:Repeater>
+            
+        </asp:View>
+    </asp:MultiView>
     
 </asp:Content>

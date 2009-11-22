@@ -25,7 +25,7 @@ namespace Atrendia.CourseManagement.Helpers
                 {
                     string applicationName =
                         ConfigurationManager.AppSettings[applicationNameKey];
-                    items[endpointKey] = new Logic.COMEndpoint(applicationName);
+                    items[endpointKey] = new Logic.COMEndpoint.COMEndpoint(applicationName);
                 }
                 return (Logic.IEndpoint)items[endpointKey];
             }

@@ -20,7 +20,10 @@ namespace Atrendia.CourseManagement.Frontend.People
             {
                 if (_contact == null)
                 {
-                    _contact = CurrentContact;
+                    string contactID = Helpers.General.
+                        Decode(Request.Params[Support.Constants.PeopleParams.Contact]);
+
+                    _contact = Endpoint.GetContactById(contactID);
                     if (_contact == null || !Support.Helpers.HasAccess(_contact))
                     {
                         _contact = null;
@@ -52,11 +55,12 @@ namespace Atrendia.CourseManagement.Frontend.People
             List<Logic.Entities.Activity> activities = Endpoint.GetActivitiesForParticipant(Contact);
             if (activities.Count > 0)
             {
-                pnlTrainings.Visible = true;
-                pnlNoTrainings.Visible = false;
+                mvTrainings.SetActiveView(pnlTrainings);
                 rptrActivities.DataSource = activities;
                 rptrActivities.DataBind();
             }
+            else
+                mvTrainings.SetActiveView(pnlNoTrainings);
         }
 
         protected void rptrActivities_ItemDataBound(object sender, RepeaterItemEventArgs e)
@@ -77,5 +81,13 @@ namespace Atrendia.CourseManagement.Frontend.People
                 lblTagPreparation.Visible = activity.TypeFlag == Logic.Entities.ActivityTypeFlag.Preparation;
             }
         }
+
+        #region Buttons
+        protected void btnEdit_click(Object sender, EventArgs e)
+        {
+            Response.Redirect(String.Format(Support.Constants.Pages.PeopleEdit, 
+                Helpers.General.Encode(Contact.Id)));
+        }
+        #endregion
     }
 }

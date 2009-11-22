@@ -4,8 +4,9 @@
 
 using System.Collections;
 using System.Configuration;
-using System.Web;
 using System.Web.Configuration;
+using Atrendia.CourseManagement.Helpers;
+using Atrendia.CourseManagement.Logic.Entities;
 
 namespace Atrendia.CourseManagement.Frontend.Support
 {
@@ -14,23 +15,23 @@ namespace Atrendia.CourseManagement.Frontend.Support
 
         private static Logic.IEndpoint CurrentEndpoint
         {
-            get { return Atrendia.CourseManagement.Helpers.Endpoint.CurrentEndpoint; }
+            get { return Endpoint.CurrentEndpoint; }
         }
 
-        private static Logic.Entities.Company CurrentCompany
+        private static Company CurrentCompany
         {
-            get { return Atrendia.CourseManagement.Helpers.Endpoint.CurrentCompany; }
+            get { return Endpoint.CurrentCompany; }
         }
         /// <summary>
         /// Check if current contact has access to given activity.
         /// </summary>
         /// <param name="activity"></param>
         /// <returns></returns>
-        public static bool HasAccess(Logic.Entities.Activity activity)
+        public static bool HasAccess(Activity activity)
         {
             if (activity.DeliveryPackageId != null)
             {
-                Logic.Entities.DeliveryPackage package = CurrentEndpoint.
+                DeliveryPackage package = CurrentEndpoint.
                         GetDeliveryPackageById(activity.DeliveryPackageId, CurrentCompany);
                 return package != null;
             }
@@ -42,14 +43,9 @@ namespace Atrendia.CourseManagement.Frontend.Support
         /// </summary>
         /// <param name="contact"></param>
         /// <returns></returns>
-        public static bool HasAccess(Logic.Entities.Contact contact)
+        public static bool HasAccess(Contact contact)
         {
-            Logic.Entities.Company company = CurrentEndpoint.GetCompanyByContactId(contact.Id);
-            if (company != null && company.Id == CurrentCompany.Id)
-            {
-                return true;
-            }
-            return false;
+            return CurrentEndpoint.HasAccess(Endpoint.CurrentContact, contact);
         }
     }
 }

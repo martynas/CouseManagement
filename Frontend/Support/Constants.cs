@@ -18,6 +18,14 @@ namespace Atrendia.CourseManagement.Frontend.Support.Constants
     public static class Pages
     {
         public const string PeopleUpload = "~/People/Upload.aspx";
+        public const string PeopleEdit = "~/People/Edit.aspx?Id={0}";
+        public const string PeopleEditWithReturn = "~/People/Edit.aspx?contact={0}&return={1}";
+    }
+
+    public static class PeopleParams
+    {
+        public const string Contact = "Id";
+        public const string Return = "return";
     }
 
 }

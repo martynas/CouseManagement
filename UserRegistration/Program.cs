@@ -15,7 +15,7 @@ namespace Atrendia.CourseManagement.UserRegistration
     {
         string contactIdKey = "CDM_UserId";
         StreamWriter logWriter;
-        Logic.COMEndpoint currentEndpoint;
+        Logic.COMEndpoint.COMEndpoint currentEndpoint;
 
         static void Main(string[] args)
         {
@@ -26,7 +26,7 @@ namespace Atrendia.CourseManagement.UserRegistration
         {
             string applicationName =
                         ConfigurationManager.AppSettings[Helpers.Endpoint.applicationNameKey];
-            currentEndpoint = new Logic.COMEndpoint(applicationName);
+            currentEndpoint = new Logic.COMEndpoint.COMEndpoint(applicationName);
 
             OpenLog();
         }

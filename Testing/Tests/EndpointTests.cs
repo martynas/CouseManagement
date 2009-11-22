@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Atrendia.CourseManagement.Logic;
+using Atrendia.CourseManagement.Logic.COMEndpoint;
 using Atrendia.CourseManagement.Logic.Entities;
 
 namespace Testing.Tests

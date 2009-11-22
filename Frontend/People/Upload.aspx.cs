@@ -200,10 +200,10 @@ namespace Atrendia.CourseManagement.Frontend.People
                     }
                     Session[Support.Constants.Session.PeopleUploadInfo] = message; 
                 }
-                //Response.Redirect("~/People/Default.aspx");
+                Response.Redirect("~/People/Default.aspx");
 
-                InitializeCoursePlanningView(contacts);
-                mvImportWizard.ActiveStepIndex++;
+                /*InitializeCoursePlanningView(contacts);
+                mvImportWizard.ActiveStepIndex++;*/
             }
         }
 

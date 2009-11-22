@@ -16,6 +16,7 @@ namespace Atrendia.CourseManagement.Logic.Entities
         private string email;
         private string directPhone;
         private string mobilePhone;
+        private string companyID;
 
         public Contact()
         {
@@ -61,6 +62,12 @@ namespace Atrendia.CourseManagement.Logic.Entities
         {
             get { return mobilePhone; }
             set { mobilePhone = value; }
+        }
+
+        public string PrimaryCompanyID
+        {
+            get { return companyID; }
+            set { companyID = value; }
         }
         #endregion
 

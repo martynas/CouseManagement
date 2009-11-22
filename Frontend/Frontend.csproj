@@ -67,6 +67,13 @@
     <Compile Include="PasswordRecovery.aspx.designer.cs">
       <DependentUpon>PasswordRecovery.aspx</DependentUpon>
     </Compile>
+    <Compile Include="People\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="People\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Profile\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -288,6 +295,7 @@
     <Content Include="Media\Contacts_Example.csv" />
     <Content Include="Media\jquery.js" />
     <Content Include="PasswordRecovery.aspx" />
+    <Content Include="People\Edit.aspx" />
     <Content Include="Profile\Default.aspx" />
     <Content Include="Support\Controls\PlannedCourses.ascx" />
     <Content Include="Support\Controls\TrainingActivityHeading.ascx" />

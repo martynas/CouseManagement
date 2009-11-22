@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using LWM = AstonRDLightWeightModel;
 
-namespace Atrendia.CourseManagement.Logic
+namespace Atrendia.CourseManagement.Logic.COMEndpoint
 {
     /// <summary>
     /// Loads objects from CDM objects/lists etc. to our entities/lists.
@@ -46,6 +46,7 @@ namespace Atrendia.CourseManagement.Logic
             contact.Email = (string)cdm.get_Attrib("email", false);
             contact.DirectPhone = (string)cdm.get_Attrib("directPhone", false);
             contact.MobilePhone = (string)cdm.get_Attrib("mobilePhone", false);
+            contact.PrimaryCompanyID = (string)cdm.get_Attrib("primaryCompany", false);
             return contact;
         }
 

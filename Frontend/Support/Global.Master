@@ -47,9 +47,10 @@
                                 <!--<li><a href="<%= ResolveUrl("~/Overview/") %>">Overview</a></li>
                                 <li><a href="<%= ResolveUrl("~/Calendar/") %>">Training sessions</a></li> -->
                                 <li>
-                                    <a href="<%= ResolveUrl("~/People/Default.aspx") %>">People</a>
+                                    <a href="<%= ResolveUrl("~/People/Default.aspx") %>">Participants</a>
                                     <ul>
-                                        <li><a href="<%= ResolveUrl("~/People/Upload.aspx") %>">Upload</a></li>
+                                        <li><a href="<%= ResolveUrl("~/People/Upload.aspx") %>">Upload participants</a></li>
+                                        <li><a href="<%= ResolveUrl("~/People/Edit.aspx") %>">Add participants individually</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="<%= ResolveUrl("~/Profile/") %>">Profile</a></li>

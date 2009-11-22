@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Text;
 using LWM = AstonRDLightWeightModel;
 
-namespace Atrendia.CourseManagement.Logic
+namespace Atrendia.CourseManagement.Logic.COMEndpoint
 {
     /// <summary>
     /// COM-powered CDM endpoint. See IEndpoint for more information.
     /// </summary>
-    public class COMEndpoint : IEndpoint
+    public partial class COMEndpoint : IEndpoint
     {
         private string applicationName;
         private COMTransformer transformer;

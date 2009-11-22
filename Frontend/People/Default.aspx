@@ -40,6 +40,7 @@
                     <th style="width: 150px">First, last</th>
                     <th style="width: 100px">E-mail</th>
                     <th style="width: 80px">Phone</th>
+                    <th style="width: 80px">Actions</th>
                 </tr>
             </HeaderTemplate>
             <ItemTemplate>
@@ -49,6 +50,7 @@
                     <td><asp:HyperLink ID="hlName" runat="server">Michael Hoffman</asp:HyperLink></td>
                     <td><asp:HyperLink ID="hlEmail" runat="server">mh@atrendia.com</asp:HyperLink></td>
                     <td><asp:Label ID="lbPhone" runat="server">+1 234 5678</asp:Label></td>
+                    <td></td>
                 </tr>
             </ItemTemplate>
             <AlternatingItemTemplate>
@@ -73,7 +75,7 @@
         <asp:View runat="server" ID="viewCourses" >
             <cm:PlannedCouses runat="server" ID="cpCoursePlanning" />
             <p>
-                <asp:Button ID="btnUpdate" runat="server" Text="Update" />
+                <asp:Button ID="btnUpdate" runat="server" Text="Save changes" />
             </p>
         </asp:View>
     </asp:MultiView>
