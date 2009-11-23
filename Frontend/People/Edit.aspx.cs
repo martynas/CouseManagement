@@ -22,7 +22,7 @@ namespace Atrendia.CourseManagement.Frontend.People
         /// If the contact doesn't exists, then returns newly created object of type Contact.
         /// </summary>
         /// <returns></returns>
-        public Contact EditedContact
+        protected Contact EditedContact
         {
             get
             {
@@ -51,7 +51,54 @@ namespace Atrendia.CourseManagement.Frontend.People
                 else
                     // Edit mode
                     mvHeader.SetActiveView(vEdit);
+
+                BindEntityToView(EditedContact);
             }
         }
+
+        protected void NavigateBack()
+        {
+            string returnUrl = Request.Params[Support.Constants.PeopleParams.ReturnUrl];
+            if (String.IsNullOrEmpty(returnUrl))
+                returnUrl = Support.Constants.Pages.PeopleDefault;
+            Response.Redirect(returnUrl);
+        }
+
+        #region Event
+        protected void btnSave_click(Object sender, EventArgs e)
+        {
+            if (Page.IsValid)
+            {
+                LoadEntityFromView(EditedContact);
+                Endpoint.SaveOrUpdateContact(EditedContact);
+                NavigateBack();
+            }
+        }
+
+        protected void btnCancel_click(Object sender, EventArgs e)
+        {
+            NavigateBack();
+        }
+        #endregion
+
+        #region Binding
+        protected void BindEntityToView(Contact contact)
+        {
+            tbTitle.Text = contact.Title;
+            tbFirstName.Text = contact.FirstName;
+            tbLastName.Text = contact.LastName;
+            tbEmail.Text = contact.Email;
+            tbMobilePhone.Text = contact.MobilePhone;
+        }
+
+        protected void LoadEntityFromView(Contact contact)
+        {
+            contact.Title = tbTitle.Text;
+            contact.FirstName = tbFirstName.Text;
+            contact.LastName = tbLastName.Text;
+            contact.Email = tbEmail.Text;
+            contact.MobilePhone = tbMobilePhone.Text;
+        }
+        #endregion
     }
 }

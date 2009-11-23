@@ -158,6 +158,7 @@ namespace Atrendia.CourseManagement.Logic.COMEndpoint
             CDMSet(cdm, "email", contact.Email);
             CDMSet(cdm, "directPhone", contact.DirectPhone);
             CDMSet(cdm, "mobilePhone", contact.MobilePhone);
+            CDMSet(cdm, "primaryCompany", contact.PrimaryCompanyID);
             return cdm;
         }
         #endregion

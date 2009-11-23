@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="COMEndpoint\COMEndpoint.cs" />
+    <Compile Include="COMEndpoint\COMEndpointContacts.cs" />
     <Compile Include="COMEndpoint\COMTransformer.cs" />
     <Compile Include="COMEndpoint\COMEndpointSecurity.cs" />
     <Compile Include="Entities\AbstractEntity.cs" />

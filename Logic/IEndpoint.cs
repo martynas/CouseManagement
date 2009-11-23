@@ -19,7 +19,7 @@ namespace Atrendia.CourseManagement.Logic
         Entities.Contact GetContactById(string id);
         Entities.Contact GetContactByEmail(string email, Entities.Company company);
         List<Entities.Contact> GetContactsByCompanyId(string id);
-        void UpdateContact(Entities.Contact contact);
+        void SaveOrUpdateContact(Entities.Contact contact);
         void DeleteContacts(List<Entities.Contact> contacts);
         List<Entities.Contact> GetContactsInRole(string roleCode);
         void ResolveContactIdByEmail(Entities.Company company, ref IList<Entities.Contact> Contacts,

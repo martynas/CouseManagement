@@ -20,12 +20,13 @@ namespace Atrendia.CourseManagement.Frontend.Support.Constants
         public const string PeopleUpload = "~/People/Upload.aspx";
         public const string PeopleEdit = "~/People/Edit.aspx?Id={0}";
         public const string PeopleEditWithReturn = "~/People/Edit.aspx?contact={0}&return={1}";
+        public const string PeopleDefault = "~/People/Default.aspx";
     }
 
     public static class PeopleParams
     {
         public const string Contact = "Id";
-        public const string Return = "return";
+        public const string ReturnUrl = "return";
     }
 
 }
