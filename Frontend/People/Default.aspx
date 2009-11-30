@@ -7,25 +7,25 @@
     <h2>People</h2>
     
     <p id="pHelpUpload" runat="server" class="help-suggestion">
-        Want to add contacts? You can <a href="Upload.aspx">upload them</a>.
+        Want to add more participants? You can <a href="Upload.aspx">upload them</a>.
     </p>
     
     <p id="pInfoUpload" runat="server" class="help-suggestion" visible="false">
-        <asp:Label ID="lblInfoUpload" runat="server">3 contacts were added.</asp:Label>
+        <asp:Label ID="lblInfoUpload" runat="server">3 participants were added.</asp:Label>
     </p>
     
     <div id="hmenu">
         <ul>
             <li runat="server" id="liContacts" class="active">
                 <asp:LinkButton runat="server" ID="lbContacts" OnClick="lbContacts_Click">
-                    Contacts</asp:LinkButton>
+                    Participants</asp:LinkButton>
             </li>
             <li runat="server" id="liCourses">
                 <asp:LinkButton ID="lbCourses" runat="server" OnClick="lbCourses_Click">
                     Assigments to Courses</asp:LinkButton>
             </li>
         </ul>
-        <a href="Upload.aspx">Upload new contacts</a>
+        <a href="Upload.aspx">Upload new participants</a>
     </div>
     <asp:MultiView runat="server" ID="mvContacts" ActiveViewIndex="0">
         <asp:View runat="server" ID="viewDetails">
@@ -50,7 +50,10 @@
                     <td><asp:HyperLink ID="hlName" runat="server">Michael Hoffman</asp:HyperLink></td>
                     <td><asp:HyperLink ID="hlEmail" runat="server">mh@atrendia.com</asp:HyperLink></td>
                     <td><asp:Label ID="lbPhone" runat="server">+1 234 5678</asp:Label></td>
-                    <td></td>
+                    <td>
+                        <asp:HyperLink ID="hlView" runat="server">View</asp:HyperLink>
+                        <asp:HyperLink ID="hlEdit" runat="server">Edit</asp:HyperLink>
+                    </td>
                 </tr>
             </ItemTemplate>
             <AlternatingItemTemplate>
@@ -60,6 +63,10 @@
                     <td><asp:HyperLink ID="hlName" runat="server">Michael Hoffman</asp:HyperLink></td>
                     <td><asp:HyperLink ID="hlEmail" runat="server">mh@atrendia.com</asp:HyperLink></td>
                     <td><asp:Label ID="lbPhone" runat="server">+1 234 5678</asp:Label></td>
+                    <td>
+                        <asp:HyperLink ID="hlView" runat="server">View</asp:HyperLink>
+                        <asp:HyperLink ID="hlEdit" runat="server">Edit</asp:HyperLink>
+                    </td>
                 </tr>
             </AlternatingItemTemplate>
             <FooterTemplate>
@@ -67,7 +74,7 @@
                 <p>
                     <asp:Button ID="btDelete" runat="server" CommandName="Delete"
                                 Text="Delete"
-                                OnClientClick="return confirm('Are you sure you want to delete selected contacts?');" />
+                                OnClientClick="return confirm('Are you sure you want to delete selected participants?');" />
                 </p>
             </FooterTemplate>
             </asp:Repeater>

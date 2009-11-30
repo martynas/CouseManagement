@@ -98,6 +98,7 @@ namespace Atrendia.CourseManagement.Frontend.People
             contact.LastName = tbLastName.Text;
             contact.Email = tbEmail.Text;
             contact.MobilePhone = tbMobilePhone.Text;
+            contact.PrimaryCompanyID = CurrentCompany.Id;
         }
         #endregion
     }

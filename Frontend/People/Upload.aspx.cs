@@ -191,10 +191,10 @@ namespace Atrendia.CourseManagement.Frontend.People
                 }
                 if (toAdd.Count + alreadyExist > 0)
                 {
-                    string message = string.Format("{0} new contacts were added.", toAdd.Count);
+                    string message = string.Format("{0} new participants were added.", toAdd.Count);
                     if (alreadyExist > 0)
                     {
-                        message += string.Format(" In addition, {0} contacts " +
+                        message += string.Format(" In addition, {0} participants " +
                             "were already in our database and were not modified.",
                             alreadyExist);
                     }
@@ -255,7 +255,7 @@ namespace Atrendia.CourseManagement.Frontend.People
             if (cpCoursePlanning.ValidatePGInfo(out c2pgInfo))
             {
                 Endpoint.UpdateContact2ProductGroups(c2pgInfo);
-                Session[Support.Constants.Session.PeopleUploadInfo] = "Contacts were added successfully";
+                Session[Support.Constants.Session.PeopleUploadInfo] = "Participants were added successfully";
                 Response.Redirect(Support.Constants.Pages.PeopleUpload);
             }
         }

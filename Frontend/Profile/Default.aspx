@@ -13,33 +13,49 @@
                 <asp:Literal EnableViewState="False" ID="FailureText" runat="server" />
             </p>
             <p>
-                <asp:Label ID="Label1" AssociatedControlID="CurrentPassword" runat="server">Current Password:</asp:Label>            
-                <asp:TextBox ID="CurrentPassword" runat="server" TextMode="Password" CssClass="text normal focus-on-load" />
-                <asp:RequiredFieldValidator ControlToValidate="CurrentPassword" 
-                    ErrorMessage="Password is required." ID="CurrentPasswordRequired" 
-                    runat="server" ToolTip="Password is required." 
-                    ValidationGroup="ChangePassword1">*</asp:RequiredFieldValidator>
+                <table class="editlist">
+                    <tr>
+                        <th>
+                            <asp:Label ID="Label1" AssociatedControlID="CurrentPassword" runat="server">Current Password:</asp:Label>            
+                        </th>
+                        <td>
+                            <asp:TextBox ID="CurrentPassword" runat="server" TextMode="Password" CssClass="text normal focus-on-load" />
+                            <asp:RequiredFieldValidator ControlToValidate="CurrentPassword" 
+                                ErrorMessage="Password is required." ID="CurrentPasswordRequired" 
+                                runat="server" ToolTip="Password is required." 
+                                ValidationGroup="ChangePassword1">*</asp:RequiredFieldValidator>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <asp:Label ID="Label2" AssociatedControlID="NewPassword" runat="server">New Password:</asp:Label>            
+                        </th>
+                        <td>
+                            <asp:TextBox ID="NewPassword" runat="server" TextMode="Password" CssClass="text normal" />
+                            <asp:RequiredFieldValidator ControlToValidate="NewPassword" 
+                                ErrorMessage="Password is required." ID="rfvNewPassword" 
+                                runat="server" ToolTip="New Password is required." 
+                                ValidationGroup="ChangePassword1">*</asp:RequiredFieldValidator>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <asp:Label ID="Label3" AssociatedControlID="ConfirmNewPassword" runat="server">Repeat New Password:</asp:Label>            
+                        </th>
+                        <td>
+                            <asp:TextBox ID="ConfirmNewPassword" runat="server" TextMode="Password" CssClass="text normal" />
+                            <asp:RequiredFieldValidator ControlToValidate="ConfirmNewPassword" 
+                                ErrorMessage="Password is required." ID="rfvConfirmNewPassword" 
+                                runat="server" ToolTip="Confirm New Password is required." 
+                                ValidationGroup="ChangePassword1">*</asp:RequiredFieldValidator>
+                            <asp:CompareValidator ControlToCompare="NewPassword" 
+                                ControlToValidate="ConfirmNewPassword" Display="Dynamic" 
+                                ErrorMessage="The confirm New Password must match the New Password entry."
+                                ID="NewPasswordCompare" runat="server" ValidationGroup="ChangePassword1"/>
+                        </td>
+                    </tr>
+                </table>
             </p>
-            <p>
-                <asp:Label ID="Label2" AssociatedControlID="NewPassword" runat="server">New Password:</asp:Label>            
-                <asp:TextBox ID="NewPassword" runat="server" TextMode="Password" CssClass="text normal" />
-                <asp:RequiredFieldValidator ControlToValidate="NewPassword" 
-                    ErrorMessage="Password is required." ID="rfvNewPassword" 
-                    runat="server" ToolTip="New Password is required." 
-                    ValidationGroup="ChangePassword1">*</asp:RequiredFieldValidator>
-            </p>
-            <p>
-                <asp:Label ID="Label3" AssociatedControlID="ConfirmNewPassword" runat="server">Repeat New Password:</asp:Label>            
-                <asp:TextBox ID="ConfirmNewPassword" runat="server" TextMode="Password" CssClass="text normal" />
-                <asp:RequiredFieldValidator ControlToValidate="ConfirmNewPassword" 
-                    ErrorMessage="Password is required." ID="rfvConfirmNewPassword" 
-                    runat="server" ToolTip="Confirm New Password is required." 
-                    ValidationGroup="ChangePassword1">*</asp:RequiredFieldValidator>
-            </p>
-            <asp:CompareValidator ControlToCompare="NewPassword" 
-                ControlToValidate="ConfirmNewPassword" Display="Dynamic" 
-                ErrorMessage="The confirm New Password must match the New Password entry."
-                ID="NewPasswordCompare" runat="server" ValidationGroup="ChangePassword1"/>
             <p>
                 <asp:Button CommandName="ChangePassword" ID="ChangePasswordPushButton" 
                     runat="server" Text="Change Password" ValidationGroup="ChangePassword1" />
