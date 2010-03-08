@@ -1,23 +1,23 @@
 <publishData>
-  <publishTarget publishUrl="C:\CDM\Deploy\2009-10-21\CourseManagement\">
-    <file relUrl="bin/Atrendia.CourseManagement.Frontend.pdb" publishTime="10/20/2009 21:30:02" />
-    <file relUrl="Support/Global.Master" publishTime="10/19/2008 18:49:40" />
+  <publishTarget publishUrl="C:\CDM\Deploy\2010-03-08\CourseManagement\">
+    <file relUrl="bin/Atrendia.CourseManagement.Frontend.pdb" publishTime="03/08/2010 21:10:33" />
+    <file relUrl="Support/Global.Master" publishTime="03/08/2010 20:41:49" />
     <file relUrl="Media/group_edit.png" publishTime="03/12/2006 21:53:32" />
     <file relUrl="Calendar/Course.aspx" publishTime="10/12/2008 20:20:10" />
     <file relUrl="Media/user_add.png" publishTime="03/12/2006 21:58:58" />
-    <file relUrl="People/View.aspx" publishTime="10/04/2008 22:13:34" />
+    <file relUrl="People/View.aspx" publishTime="10/22/2008 21:43:09" />
     <file relUrl="Calendar/View.aspx" publishTime="01/13/2009 03:50:04" />
     <file relUrl="Calendar/ChangeLocation.aspx" publishTime="10/12/2008 20:18:49" />
-    <file relUrl="Support/Controls/AccountManager.ascx" publishTime="01/13/2009 00:10:32" />
+    <file relUrl="People/Edit.aspx" publishTime="11/23/2009 22:22:35" />
     <file relUrl="Media/calendar_view_day.png" publishTime="03/12/2006 21:50:16" />
     <file relUrl="Media/jquery.js" publishTime="10/18/2008 16:54:04" />
-    <file relUrl="Profile/Default.aspx" publishTime="10/19/2008 20:29:57" />
+    <file relUrl="Profile/Default.aspx" publishTime="11/30/2009 21:27:23" />
     <file relUrl="Media/user_edit.png" publishTime="03/12/2006 21:59:02" />
-    <file relUrl="bin/Atrendia.CourseManagement.Frontend.dll" publishTime="10/20/2009 21:30:02" />
+    <file relUrl="bin/Atrendia.CourseManagement.Frontend.dll" publishTime="03/08/2010 21:10:34" />
     <file relUrl="Media/done.png" publishTime="03/12/2006 21:48:14" />
     <file relUrl="Media/group.png" publishTime="03/12/2006 21:53:28" />
-    <file relUrl="People/Upload.aspx" publishTime="10/13/2008 20:19:08" />
-    <file relUrl="bin/Interop.AstonRDLightWeightModel.dll" publishTime="10/12/2008 19:12:12" />
+    <file relUrl="People/Upload.aspx" publishTime="10/22/2008 21:56:48" />
+    <file relUrl="bin/Interop.AstonRDLightWeightModel.dll" publishTime="03/08/2010 21:10:30" />
     <file relUrl="Media/background_gradient.gif" publishTime="12/04/2008 10:03:26" />
     <file relUrl="Media/group_add.png" publishTime="03/12/2006 21:53:30" />
     <file relUrl="Calendar/Default.aspx" publishTime="02/18/2009 23:59:56" />
@@ -25,16 +25,17 @@
     <file relUrl="Media/group_delete.png" publishTime="03/12/2006 21:53:30" />
     <file relUrl="Media/tick.png" publishTime="03/12/2006 21:58:48" />
     <file relUrl="Media/user_delete.png" publishTime="03/12/2006 21:59:00" />
+    <file relUrl="Support/Controls/AccountManager.ascx" publishTime="01/13/2009 00:10:32" />
     <file relUrl="Media/atrendia_logo.png" publishTime="11/03/2008 13:55:04" />
     <file relUrl="Media/block_header_grad.gif" publishTime="12/04/2008 09:56:16" />
     <file relUrl="Support/Web.config" publishTime="01/13/2009 00:25:58" />
     <file relUrl="Media/calendar_view_month.png" publishTime="03/12/2006 21:50:16" />
     <file relUrl="Media/excel_file.gif" publishTime="09/22/2005 13:11:12" />
-    <file relUrl="Media/main.css" publishTime="10/20/2009 20:16:09" />
+    <file relUrl="Media/main.css" publishTime="10/22/2008 21:56:00" />
     <file relUrl="Media/extra.css" publishTime="01/13/2009 19:21:32" />
     <file relUrl="Media/menu_inactive_grad.gif" publishTime="01/12/2009 22:54:36" />
     <file relUrl="Support/Controls/PlannedCourses.ascx" publishTime="10/18/2008 17:04:25" />
-    <file relUrl="Media/site.js" publishTime="10/21/2008 21:06:29" />
+    <file relUrl="Media/site.js" publishTime="10/21/2008 22:18:31" />
     <file relUrl="Media/information.png" publishTime="03/12/2006 21:53:50" />
     <file relUrl="Login.aspx" publishTime="10/12/2008 19:42:03" />
     <file relUrl="Media/Web.config" publishTime="01/13/2009 19:58:20" />
@@ -43,11 +44,11 @@
     <file relUrl="PasswordRecovery.aspx" publishTime="10/12/2008 19:42:59" />
     <file relUrl="Media/attention.png" publishTime="03/12/2006 21:48:56" />
     <file relUrl="Media/user_go.png" publishTime="03/12/2006 21:59:02" />
-    <file relUrl="bin/Atrendia.CourseManagement.Logic.pdb" publishTime="10/20/2009 20:05:03" />
+    <file relUrl="bin/Atrendia.CourseManagement.Logic.pdb" publishTime="03/08/2010 21:10:30" />
     <file relUrl="Calendar/Preparation.aspx" publishTime="01/13/2009 19:21:44" />
-    <file relUrl="bin/Atrendia.CourseManagement.Logic.dll" publishTime="10/20/2009 20:05:03" />
+    <file relUrl="bin/Atrendia.CourseManagement.Logic.dll" publishTime="03/08/2010 21:10:30" />
     <file relUrl="Media/mootools-1.11.js" publishTime="10/13/2008 22:15:03" />
-    <file relUrl="People/Default.aspx" publishTime="10/20/2009 21:20:14" />
+    <file relUrl="People/Default.aspx" publishTime="11/30/2009 21:18:11" />
     <file relUrl="Media/email.png" publishTime="03/12/2006 21:52:32" />
     <file relUrl="Media/Contacts_Example.csv" publishTime="03/12/2009 19:32:48" />
     <file relUrl="Media/user.png" publishTime="03/12/2006 21:58:58" />
@@ -57,9 +58,138 @@
     <file relUrl="Support/Controls/ActivityCalendar.ascx" publishTime="10/02/2008 19:52:05" />
     <file relUrl="Web.config" publishTime="10/12/2008 19:16:32" />
     <file relUrl="Overview/Default.aspx" publishTime="02/18/2009 23:41:38" />
+    <file relUrl="bin/Helpers.pdb" publishTime="03/08/2010 21:10:31" />
+    <file relUrl="Media/calendar_view_week.png" publishTime="03/12/2006 21:50:18" />
+    <file relUrl="Media/group_go.png" publishTime="03/12/2006 21:53:34" />
+    <file relUrl="bin/Helpers.dll" publishTime="03/08/2010 21:10:31" />
+    <file relUrl="Default.aspx" publishTime="01/12/2009 23:27:04" />
+  </publishTarget>
+  <publishTarget publishUrl="C:\CDM\Deploy\2009-11-30\CourseManagement\">
+    <file relUrl="bin/Atrendia.CourseManagement.Frontend.pdb" publishTime="11/30/2009 21:20:48" />
+    <file relUrl="Support/Global.Master" publishTime="11/30/2009 21:20:45" />
+    <file relUrl="Media/group_edit.png" publishTime="03/12/2006 21:53:32" />
+    <file relUrl="Calendar/Course.aspx" publishTime="10/12/2008 20:20:10" />
+    <file relUrl="People/View.aspx" publishTime="10/22/2008 21:43:09" />
+    <file relUrl="Calendar/View.aspx" publishTime="01/13/2009 03:50:04" />
+    <file relUrl="Calendar/ChangeLocation.aspx" publishTime="10/12/2008 20:18:49" />
+    <file relUrl="People/Edit.aspx" publishTime="11/23/2009 22:22:35" />
+    <file relUrl="Media/calendar_view_day.png" publishTime="03/12/2006 21:50:16" />
+    <file relUrl="Media/jquery.js" publishTime="10/18/2008 16:54:04" />
+    <file relUrl="Profile/Default.aspx" publishTime="11/30/2009 21:27:23" />
+    <file relUrl="Support/Controls/AccountManager.ascx" publishTime="01/13/2009 00:10:32" />
+    <file relUrl="bin/Atrendia.CourseManagement.Frontend.dll" publishTime="11/30/2009 21:20:48" />
+    <file relUrl="Media/done.png" publishTime="03/12/2006 21:48:14" />
+    <file relUrl="People/Default.aspx" publishTime="11/30/2009 21:18:11" />
+    <file relUrl="Media/group.png" publishTime="03/12/2006 21:53:28" />
+    <file relUrl="People/Upload.aspx" publishTime="10/22/2008 21:56:48" />
+    <file relUrl="Media/background_gradient.gif" publishTime="12/04/2008 10:03:26" />
+    <file relUrl="Media/block_header_grad.gif" publishTime="12/04/2008 09:56:16" />
+    <file relUrl="Calendar/Default.aspx" publishTime="02/18/2009 23:59:56" />
+    <file relUrl="Support/Controls/MiniCalendar.ascx" publishTime="06/12/2008 01:36:36" />
+    <file relUrl="Media/group_delete.png" publishTime="03/12/2006 21:53:30" />
+    <file relUrl="Media/tick.png" publishTime="03/12/2006 21:58:48" />
+    <file relUrl="Media/user_edit.png" publishTime="03/12/2006 21:59:02" />
+    <file relUrl="Logout.aspx" publishTime="01/13/2009 00:49:32" />
+    <file relUrl="Media/user_add.png" publishTime="03/12/2006 21:58:58" />
+    <file relUrl="Web.config" publishTime="10/12/2008 19:16:32" />
+    <file relUrl="Media/group_go.png" publishTime="03/12/2006 21:53:34" />
+    <file relUrl="Media/calendar_view_month.png" publishTime="03/12/2006 21:50:16" />
+    <file relUrl="Media/excel_file.gif" publishTime="09/22/2005 13:11:12" />
+    <file relUrl="Media/main.css" publishTime="10/22/2008 21:56:00" />
+    <file relUrl="Media/extra.css" publishTime="01/13/2009 19:21:32" />
+    <file relUrl="Default.aspx" publishTime="01/12/2009 23:27:04" />
+    <file relUrl="Media/menu_inactive_grad.gif" publishTime="01/12/2009 22:54:36" />
+    <file relUrl="Media/site.js" publishTime="10/21/2008 22:18:31" />
+    <file relUrl="Login.aspx" publishTime="10/12/2008 19:42:03" />
+    <file relUrl="Media/Web.config" publishTime="01/13/2009 19:58:20" />
+    <file relUrl="Media/exclamation.png" publishTime="03/12/2006 21:52:48" />
+    <file relUrl="Support/Controls/TrainingActivityHeading.ascx" publishTime="10/12/2008 22:28:13" />
+    <file relUrl="bin/Interop.AstonRDLightWeightModel.dll" publishTime="10/22/2008 13:42:33" />
+    <file relUrl="Media/attention.png" publishTime="03/12/2006 21:48:56" />
+    <file relUrl="Media/user_go.png" publishTime="03/12/2006 21:59:02" />
+    <file relUrl="PasswordRecovery.aspx" publishTime="10/12/2008 19:42:59" />
+    <file relUrl="bin/Atrendia.CourseManagement.Logic.pdb" publishTime="11/23/2009 22:08:57" />
+    <file relUrl="Calendar/Preparation.aspx" publishTime="01/13/2009 19:21:44" />
+    <file relUrl="Media/mootools-1.11.js" publishTime="10/13/2008 22:15:03" />
+    <file relUrl="Media/group_add.png" publishTime="03/12/2006 21:53:30" />
+    <file relUrl="Support/Controls/PlannedCourses.ascx" publishTime="10/18/2008 17:04:25" />
+    <file relUrl="Media/email.png" publishTime="03/12/2006 21:52:32" />
+    <file relUrl="Media/Contacts_Example.csv" publishTime="03/12/2009 19:32:48" />
+    <file relUrl="Support/Web.config" publishTime="01/13/2009 00:25:58" />
+    <file relUrl="Media/user.png" publishTime="03/12/2006 21:58:58" />
+    <file relUrl="bin/Atrendia.CourseManagement.Logic.dll" publishTime="11/23/2009 22:08:57" />
+    <file relUrl="Media/menu_active_grad.gif" publishTime="12/04/2008 10:25:28" />
+    <file relUrl="Support/Controls/ActivityCalendar.ascx" publishTime="10/02/2008 19:52:05" />
+    <file relUrl="Media/user_delete.png" publishTime="03/12/2006 21:59:00" />
+    <file relUrl="Overview/Default.aspx" publishTime="02/18/2009 23:41:38" />
+    <file relUrl="bin/Helpers.pdb" publishTime="11/23/2009 22:08:57" />
+    <file relUrl="Media/calendar_view_week.png" publishTime="03/12/2006 21:50:18" />
+    <file relUrl="Media/atrendia_logo.png" publishTime="11/03/2008 13:55:04" />
+    <file relUrl="Media/agenda.png" publishTime="03/12/2006 21:48:40" />
+    <file relUrl="bin/Helpers.dll" publishTime="11/23/2009 22:08:58" />
+    <file relUrl="Media/information.png" publishTime="03/12/2006 21:53:50" />
+  </publishTarget>
+  <publishTarget publishUrl="C:\CDM\Deploy\2009-10-21\CourseManagement\">
+    <file relUrl="bin/Atrendia.CourseManagement.Frontend.pdb" publishTime="10/20/2009 21:30:02" />
+    <file relUrl="Support/Global.Master" publishTime="10/19/2008 18:49:40" />
+    <file relUrl="Media/group_edit.png" publishTime="03/12/2006 21:53:32" />
+    <file relUrl="Calendar/Course.aspx" publishTime="10/12/2008 20:20:10" />
+    <file relUrl="Media/user_add.png" publishTime="03/12/2006 21:58:58" />
+    <file relUrl="People/View.aspx" publishTime="10/04/2008 22:13:34" />
+    <file relUrl="Calendar/View.aspx" publishTime="01/13/2009 03:50:04" />
+    <file relUrl="Calendar/ChangeLocation.aspx" publishTime="10/12/2008 20:18:49" />
+    <file relUrl="Media/calendar_view_day.png" publishTime="03/12/2006 21:50:16" />
+    <file relUrl="Media/jquery.js" publishTime="10/18/2008 16:54:04" />
+    <file relUrl="Profile/Default.aspx" publishTime="10/19/2008 20:29:57" />
+    <file relUrl="Support/Controls/AccountManager.ascx" publishTime="01/13/2009 00:10:32" />
+    <file relUrl="bin/Atrendia.CourseManagement.Frontend.dll" publishTime="10/20/2009 21:30:02" />
+    <file relUrl="Media/done.png" publishTime="03/12/2006 21:48:14" />
+    <file relUrl="Media/group.png" publishTime="03/12/2006 21:53:28" />
+    <file relUrl="People/Upload.aspx" publishTime="10/13/2008 20:19:08" />
+    <file relUrl="Media/background_gradient.gif" publishTime="12/04/2008 10:03:26" />
+    <file relUrl="Media/block_header_grad.gif" publishTime="12/04/2008 09:56:16" />
+    <file relUrl="Calendar/Default.aspx" publishTime="02/18/2009 23:59:56" />
+    <file relUrl="Support/Controls/MiniCalendar.ascx" publishTime="06/12/2008 01:36:36" />
+    <file relUrl="Media/group_delete.png" publishTime="03/12/2006 21:53:30" />
+    <file relUrl="Media/tick.png" publishTime="03/12/2006 21:58:48" />
+    <file relUrl="Media/user_edit.png" publishTime="03/12/2006 21:59:02" />
+    <file relUrl="Media/user_delete.png" publishTime="03/12/2006 21:59:00" />
+    <file relUrl="Media/menu_inactive_grad.gif" publishTime="01/12/2009 22:54:36" />
+    <file relUrl="Media/calendar_view_month.png" publishTime="03/12/2006 21:50:16" />
+    <file relUrl="Media/excel_file.gif" publishTime="09/22/2005 13:11:12" />
+    <file relUrl="Media/main.css" publishTime="10/20/2009 20:16:09" />
+    <file relUrl="Media/extra.css" publishTime="01/13/2009 19:21:32" />
+    <file relUrl="Support/Controls/PlannedCourses.ascx" publishTime="10/18/2008 17:04:25" />
+    <file relUrl="Media/site.js" publishTime="10/21/2008 21:06:29" />
+    <file relUrl="Media/information.png" publishTime="03/12/2006 21:53:50" />
+    <file relUrl="Login.aspx" publishTime="10/12/2008 19:42:03" />
+    <file relUrl="Media/Web.config" publishTime="01/13/2009 19:58:20" />
+    <file relUrl="Media/exclamation.png" publishTime="03/12/2006 21:52:48" />
+    <file relUrl="Media/atrendia_logo.png" publishTime="11/03/2008 13:55:04" />
+    <file relUrl="Support/Controls/TrainingActivityHeading.ascx" publishTime="10/12/2008 22:28:13" />
+    <file relUrl="bin/Interop.AstonRDLightWeightModel.dll" publishTime="10/12/2008 19:12:12" />
+    <file relUrl="Media/attention.png" publishTime="03/12/2006 21:48:56" />
+    <file relUrl="Media/user_go.png" publishTime="03/12/2006 21:59:02" />
+    <file relUrl="PasswordRecovery.aspx" publishTime="10/12/2008 19:42:59" />
+    <file relUrl="bin/Atrendia.CourseManagement.Logic.pdb" publishTime="10/20/2009 20:05:03" />
+    <file relUrl="Calendar/Preparation.aspx" publishTime="01/13/2009 19:21:44" />
+    <file relUrl="bin/Atrendia.CourseManagement.Logic.dll" publishTime="10/20/2009 20:05:03" />
+    <file relUrl="Media/mootools-1.11.js" publishTime="10/13/2008 22:15:03" />
+    <file relUrl="Media/group_add.png" publishTime="03/12/2006 21:53:30" />
+    <file relUrl="People/Default.aspx" publishTime="10/20/2009 21:20:14" />
+    <file relUrl="Media/email.png" publishTime="03/12/2006 21:52:32" />
+    <file relUrl="Media/Contacts_Example.csv" publishTime="03/12/2009 19:32:48" />
+    <file relUrl="Support/Web.config" publishTime="01/13/2009 00:25:58" />
+    <file relUrl="Logout.aspx" publishTime="01/13/2009 00:49:32" />
+    <file relUrl="Media/user.png" publishTime="03/12/2006 21:58:58" />
+    <file relUrl="Media/menu_active_grad.gif" publishTime="12/04/2008 10:25:28" />
+    <file relUrl="Support/Controls/ActivityCalendar.ascx" publishTime="10/02/2008 19:52:05" />
+    <file relUrl="Web.config" publishTime="10/12/2008 19:16:32" />
+    <file relUrl="Overview/Default.aspx" publishTime="02/18/2009 23:41:38" />
     <file relUrl="bin/Helpers.pdb" publishTime="10/20/2009 20:05:04" />
     <file relUrl="Media/calendar_view_week.png" publishTime="03/12/2006 21:50:18" />
     <file relUrl="Media/group_go.png" publishTime="03/12/2006 21:53:34" />
+    <file relUrl="Media/agenda.png" publishTime="03/12/2006 21:48:40" />
     <file relUrl="bin/Helpers.dll" publishTime="10/20/2009 20:05:04" />
     <file relUrl="Default.aspx" publishTime="01/12/2009 23:27:04" />
   </publishTarget>
@@ -72,51 +202,50 @@
     <file relUrl="People/View.aspx" publishTime="10/04/2008 22:13:34" />
     <file relUrl="Calendar/View.aspx" publishTime="01/13/2009 03:50:04" />
     <file relUrl="Calendar/ChangeLocation.aspx" publishTime="10/12/2008 20:18:49" />
-    <file relUrl="Support/Controls/AccountManager.ascx" publishTime="01/13/2009 00:10:32" />
     <file relUrl="Media/calendar_view_day.png" publishTime="03/12/2006 21:50:16" />
     <file relUrl="Media/jquery.js" publishTime="10/18/2008 16:54:04" />
     <file relUrl="Profile/Default.aspx" publishTime="10/19/2008 20:29:57" />
-    <file relUrl="Media/user_edit.png" publishTime="03/12/2006 21:59:02" />
+    <file relUrl="Support/Controls/AccountManager.ascx" publishTime="01/13/2009 00:10:32" />
     <file relUrl="bin/Atrendia.CourseManagement.Frontend.dll" publishTime="10/19/2008 20:47:01" />
     <file relUrl="Media/done.png" publishTime="03/12/2006 21:48:14" />
     <file relUrl="Media/group.png" publishTime="03/12/2006 21:53:28" />
     <file relUrl="People/Upload.aspx" publishTime="10/13/2008 20:19:08" />
-    <file relUrl="bin/Interop.AstonRDLightWeightModel.dll" publishTime="10/12/2008 19:12:12" />
     <file relUrl="Media/background_gradient.gif" publishTime="12/04/2008 10:03:26" />
-    <file relUrl="Media/group_add.png" publishTime="03/12/2006 21:53:30" />
+    <file relUrl="Media/block_header_grad.gif" publishTime="12/04/2008 09:56:16" />
     <file relUrl="Calendar/Default.aspx" publishTime="02/18/2009 23:59:56" />
     <file relUrl="Support/Controls/MiniCalendar.ascx" publishTime="06/12/2008 01:36:36" />
     <file relUrl="Media/group_delete.png" publishTime="03/12/2006 21:53:30" />
     <file relUrl="Media/tick.png" publishTime="03/12/2006 21:58:48" />
+    <file relUrl="Media/user_edit.png" publishTime="03/12/2006 21:59:02" />
     <file relUrl="Media/user_delete.png" publishTime="03/12/2006 21:59:00" />
-    <file relUrl="Media/atrendia_logo.png" publishTime="11/03/2008 13:55:04" />
-    <file relUrl="Media/block_header_grad.gif" publishTime="12/04/2008 09:56:16" />
-    <file relUrl="Support/Web.config" publishTime="01/13/2009 00:25:58" />
+    <file relUrl="Media/menu_inactive_grad.gif" publishTime="01/12/2009 22:54:36" />
     <file relUrl="Media/calendar_view_month.png" publishTime="03/12/2006 21:50:16" />
     <file relUrl="Media/excel_file.gif" publishTime="09/22/2005 13:11:12" />
     <file relUrl="Media/main.css" publishTime="10/04/2008 22:23:49" />
     <file relUrl="Media/extra.css" publishTime="01/13/2009 19:21:32" />
-    <file relUrl="Media/menu_inactive_grad.gif" publishTime="01/12/2009 22:54:36" />
     <file relUrl="Support/Controls/PlannedCourses.ascx" publishTime="10/18/2008 17:04:25" />
     <file relUrl="Media/site.js" publishTime="10/19/2008 20:27:10" />
     <file relUrl="Media/information.png" publishTime="03/12/2006 21:53:50" />
     <file relUrl="Login.aspx" publishTime="10/12/2008 19:42:03" />
     <file relUrl="Media/Web.config" publishTime="01/13/2009 19:58:20" />
     <file relUrl="Media/exclamation.png" publishTime="03/12/2006 21:52:48" />
+    <file relUrl="Media/atrendia_logo.png" publishTime="11/03/2008 13:55:04" />
     <file relUrl="Support/Controls/TrainingActivityHeading.ascx" publishTime="10/12/2008 22:28:13" />
-    <file relUrl="PasswordRecovery.aspx" publishTime="10/12/2008 19:42:59" />
+    <file relUrl="bin/Interop.AstonRDLightWeightModel.dll" publishTime="10/12/2008 19:12:12" />
     <file relUrl="Media/attention.png" publishTime="03/12/2006 21:48:56" />
     <file relUrl="Media/user_go.png" publishTime="03/12/2006 21:59:02" />
+    <file relUrl="PasswordRecovery.aspx" publishTime="10/12/2008 19:42:59" />
     <file relUrl="bin/Atrendia.CourseManagement.Logic.pdb" publishTime="10/19/2008 20:47:01" />
     <file relUrl="Calendar/Preparation.aspx" publishTime="01/13/2009 19:21:44" />
     <file relUrl="bin/Atrendia.CourseManagement.Logic.dll" publishTime="10/19/2008 20:47:01" />
     <file relUrl="Media/mootools-1.11.js" publishTime="10/13/2008 22:15:03" />
+    <file relUrl="Media/group_add.png" publishTime="03/12/2006 21:53:30" />
     <file relUrl="People/Default.aspx" publishTime="10/19/2008 20:29:57" />
     <file relUrl="Media/email.png" publishTime="03/12/2006 21:52:32" />
     <file relUrl="Media/Contacts_Example.csv" publishTime="03/12/2009 19:32:48" />
-    <file relUrl="Media/user.png" publishTime="03/12/2006 21:58:58" />
+    <file relUrl="Support/Web.config" publishTime="01/13/2009 00:25:58" />
     <file relUrl="Logout.aspx" publishTime="01/13/2009 00:49:32" />
-    <file relUrl="Media/agenda.png" publishTime="03/12/2006 21:48:40" />
+    <file relUrl="Media/user.png" publishTime="03/12/2006 21:58:58" />
     <file relUrl="Media/menu_active_grad.gif" publishTime="12/04/2008 10:25:28" />
     <file relUrl="Support/Controls/ActivityCalendar.ascx" publishTime="10/02/2008 19:52:05" />
     <file relUrl="Web.config" publishTime="10/12/2008 19:16:32" />
@@ -124,6 +253,7 @@
     <file relUrl="bin/Helpers.pdb" publishTime="10/19/2008 20:47:01" />
     <file relUrl="Media/calendar_view_week.png" publishTime="03/12/2006 21:50:18" />
     <file relUrl="Media/group_go.png" publishTime="03/12/2006 21:53:34" />
+    <file relUrl="Media/agenda.png" publishTime="03/12/2006 21:48:40" />
     <file relUrl="bin/Helpers.dll" publishTime="10/19/2008 20:47:01" />
     <file relUrl="Default.aspx" publishTime="01/12/2009 23:27:04" />
   </publishTarget>
@@ -136,11 +266,9 @@
     <file relUrl="People/View.aspx" publishTime="10/04/2008 22:13:34" />
     <file relUrl="Calendar/View.aspx" publishTime="01/13/2009 03:50:04" />
     <file relUrl="Calendar/ChangeLocation.aspx" publishTime="10/12/2008 20:18:49" />
-    <file relUrl="Support/Controls/AccountManager.ascx" publishTime="01/13/2009 00:10:32" />
     <file relUrl="Media/calendar_view_day.png" publishTime="03/12/2006 21:50:16" />
     <file relUrl="Support/Controls/PlannedCourses.ascx" publishTime="09/06/2008 21:10:36" />
-    <file relUrl="Calendar/Preparation.aspx" publishTime="01/13/2009 19:21:44" />
-    <file relUrl="Media/user_edit.png" publishTime="03/12/2006 21:59:02" />
+    <file relUrl="Support/Controls/AccountManager.ascx" publishTime="01/13/2009 00:10:32" />
     <file relUrl="bin/Atrendia.CourseManagement.Frontend.dll" publishTime="09/08/2008 22:16:58" />
     <file relUrl="Media/done.png" publishTime="03/12/2006 21:48:14" />
     <file relUrl="Media/group.png" publishTime="03/12/2006 21:53:28" />
@@ -151,13 +279,12 @@
     <file relUrl="Support/Controls/MiniCalendar.ascx" publishTime="06/12/2008 01:36:36" />
     <file relUrl="Media/group_delete.png" publishTime="03/12/2006 21:53:30" />
     <file relUrl="Media/tick.png" publishTime="03/12/2006 21:58:48" />
-    <file relUrl="Media/user_delete.png" publishTime="03/12/2006 21:59:00" />
+    <file relUrl="Media/user_edit.png" publishTime="03/12/2006 21:59:02" />
     <file relUrl="Media/menu_inactive_grad.gif" publishTime="01/12/2009 22:54:36" />
     <file relUrl="Media/block_header_grad.gif" publishTime="12/04/2008 09:56:16" />
-    <file relUrl="Support/Web.config" publishTime="01/13/2009 00:25:58" />
     <file relUrl="Media/group_go.png" publishTime="03/12/2006 21:53:34" />
     <file relUrl="Media/calendar_view_month.png" publishTime="03/12/2006 21:50:16" />
-    <file relUrl="Media/excel_file.gif" publishTime="09/22/2005 13:11:12" />
+    <file relUrl="Web.config" publishTime="09/03/2008 19:33:56" />
     <file relUrl="Media/main.css" publishTime="10/04/2008 22:23:49" />
     <file relUrl="Media/extra.css" publishTime="01/13/2009 19:21:32" />
     <file relUrl="Media/site.js" publishTime="01/14/2009 12:25:30" />
@@ -169,22 +296,25 @@
     <file relUrl="bin/Interop.AstonRDLightWeightModel.dll" publishTime="09/08/2008 22:16:57" />
     <file relUrl="Media/attention.png" publishTime="03/12/2006 21:48:56" />
     <file relUrl="Media/user_go.png" publishTime="03/12/2006 21:59:02" />
-    <file relUrl="bin/Atrendia.CourseManagement.Logic.pdb" publishTime="09/08/2008 22:16:57" />
-    <file relUrl="Media/mootools-1.11.js" publishTime="12/01/2008 20:34:00" />
+    <file relUrl="Media/excel_file.gif" publishTime="09/22/2005 13:11:12" />
+    <file relUrl="Calendar/Preparation.aspx" publishTime="01/13/2009 19:21:44" />
     <file relUrl="bin/Atrendia.CourseManagement.Logic.dll" publishTime="09/08/2008 22:16:57" />
+    <file relUrl="Media/mootools-1.11.js" publishTime="12/01/2008 20:34:00" />
+    <file relUrl="bin/Atrendia.CourseManagement.Logic.pdb" publishTime="09/08/2008 22:16:57" />
     <file relUrl="People/Default.aspx" publishTime="10/04/2008 22:20:07" />
     <file relUrl="Media/email.png" publishTime="03/12/2006 21:52:32" />
     <file relUrl="Media/Contacts_Example.csv" publishTime="03/12/2009 19:32:48" />
-    <file relUrl="Media/user.png" publishTime="03/12/2006 21:58:58" />
+    <file relUrl="Support/Web.config" publishTime="01/13/2009 00:25:58" />
     <file relUrl="Logout.aspx" publishTime="01/13/2009 00:49:32" />
-    <file relUrl="Media/agenda.png" publishTime="03/12/2006 21:48:40" />
+    <file relUrl="Media/user.png" publishTime="03/12/2006 21:58:58" />
     <file relUrl="Media/menu_active_grad.gif" publishTime="12/04/2008 10:25:28" />
     <file relUrl="Support/Controls/ActivityCalendar.ascx" publishTime="10/02/2008 19:52:05" />
-    <file relUrl="Web.config" publishTime="09/03/2008 19:33:56" />
+    <file relUrl="Media/user_delete.png" publishTime="03/12/2006 21:59:00" />
     <file relUrl="Overview/Default.aspx" publishTime="02/18/2009 23:41:38" />
     <file relUrl="bin/Helpers.pdb" publishTime="09/08/2008 22:16:57" />
     <file relUrl="Media/calendar_view_week.png" publishTime="03/12/2006 21:50:18" />
     <file relUrl="Media/atrendia_logo.png" publishTime="11/03/2008 13:55:04" />
+    <file relUrl="Media/agenda.png" publishTime="03/12/2006 21:48:40" />
     <file relUrl="bin/Helpers.dll" publishTime="09/08/2008 22:16:57" />
     <file relUrl="Default.aspx" publishTime="01/12/2009 23:27:04" />
   </publishTarget>
@@ -210,12 +340,10 @@
     <file relUrl="Media/group_delete.png" publishTime="03/12/2006 21:53:30" />
     <file relUrl="Media/tick.png" publishTime="03/12/2006 21:58:48" />
     <file relUrl="Media/user_edit.png" publishTime="03/12/2006 21:59:02" />
-    <file relUrl="Logout.aspx" publishTime="01/13/2009 00:49:32" />
     <file relUrl="Media/menu_inactive_grad.gif" publishTime="01/12/2009 22:54:36" />
-    <file relUrl="Web.config" publishTime="10/08/2008 21:01:04" />
     <file relUrl="Media/block_header_grad.gif" publishTime="12/04/2008 09:56:16" />
     <file relUrl="Media/calendar_view_month.png" publishTime="03/12/2006 21:50:16" />
-    <file relUrl="Media/excel_file.gif" publishTime="09/22/2005 13:11:12" />
+    <file relUrl="Web.config" publishTime="10/08/2008 21:01:04" />
     <file relUrl="Media/main.css" publishTime="10/04/2008 22:23:49" />
     <file relUrl="Media/extra.css" publishTime="01/13/2009 19:21:32" />
     <file relUrl="Default.aspx" publishTime="01/12/2009 23:27:04" />
@@ -228,15 +356,17 @@
     <file relUrl="bin/Interop.AstonRDLightWeightModel.dll" publishTime="09/13/2008 19:05:24" />
     <file relUrl="Media/attention.png" publishTime="03/12/2006 21:48:56" />
     <file relUrl="Media/user_go.png" publishTime="03/12/2006 21:59:02" />
-    <file relUrl="bin/Atrendia.CourseManagement.Logic.pdb" publishTime="09/19/2008 20:55:37" />
+    <file relUrl="Media/excel_file.gif" publishTime="09/22/2005 13:11:12" />
     <file relUrl="Calendar/Preparation.aspx" publishTime="01/13/2009 19:21:44" />
     <file relUrl="Media/mootools-1.11.js" publishTime="12/01/2008 20:34:00" />
+    <file relUrl="bin/Atrendia.CourseManagement.Logic.pdb" publishTime="09/19/2008 20:55:37" />
     <file relUrl="People/Default.aspx" publishTime="10/04/2008 22:20:07" />
     <file relUrl="Media/email.png" publishTime="03/12/2006 21:52:32" />
     <file relUrl="Media/Contacts_Example.csv" publishTime="03/12/2009 19:32:48" />
     <file relUrl="Support/Web.config" publishTime="01/13/2009 00:25:58" />
-    <file relUrl="Media/user.png" publishTime="03/12/2006 21:58:58" />
+    <file relUrl="Logout.aspx" publishTime="01/13/2009 00:49:32" />
     <file relUrl="bin/Atrendia.CourseManagement.Logic.dll" publishTime="09/19/2008 20:55:37" />
+    <file relUrl="Media/user.png" publishTime="03/12/2006 21:58:58" />
     <file relUrl="Media/menu_active_grad.gif" publishTime="12/04/2008 10:25:28" />
     <file relUrl="Support/Controls/ActivityCalendar.ascx" publishTime="10/02/2008 19:52:05" />
     <file relUrl="Media/user_delete.png" publishTime="03/12/2006 21:59:00" />
@@ -288,7 +418,6 @@
     <file relUrl="Media/user_go.png" publishTime="03/12/2006 21:59:02" />
     <file relUrl="Media/excel_file.gif" publishTime="09/22/2005 13:11:12" />
     <file relUrl="Calendar/Preparation.aspx" publishTime="01/13/2009 19:21:44" />
-    <file relUrl="bin/Atrendia.CourseManagement.Logic.dll" publishTime="10/12/2008 22:39:15" />
     <file relUrl="Media/mootools-1.11.js" publishTime="12/01/2008 20:34:00" />
     <file relUrl="bin/Atrendia.CourseManagement.Logic.pdb" publishTime="10/12/2008 22:39:15" />
     <file relUrl="People/Default.aspx" publishTime="10/04/2008 22:20:07" />
@@ -296,6 +425,7 @@
     <file relUrl="Media/Contacts_Example.csv" publishTime="03/12/2009 19:32:48" />
     <file relUrl="Support/Web.config" publishTime="01/13/2009 00:25:58" />
     <file relUrl="Logout.aspx" publishTime="01/13/2009 00:49:32" />
+    <file relUrl="bin/Atrendia.CourseManagement.Logic.dll" publishTime="10/12/2008 22:39:15" />
     <file relUrl="Media/user.png" publishTime="03/12/2006 21:58:58" />
     <file relUrl="Media/menu_active_grad.gif" publishTime="12/04/2008 10:25:28" />
     <file relUrl="Support/Controls/ActivityCalendar.ascx" publishTime="10/02/2008 19:52:05" />
@@ -445,7 +575,6 @@
     <file relUrl="Support/Controls/MiniCalendar.ascx" publishTime="06/12/2008 01:36:36" />
     <file relUrl="Media/group_delete.png" publishTime="03/12/2006 21:53:30" />
     <file relUrl="Media/tick.png" publishTime="03/12/2006 21:58:48" />
-    <file relUrl="Media/user_delete.png" publishTime="03/12/2006 21:59:00" />
     <file relUrl="Media/menu_inactive_grad.gif" publishTime="01/12/2009 22:54:36" />
     <file relUrl="bin/x86/Release/Atrendia.CourseManagement.Logic.pdb" publishTime="10/05/2008 19:39:41" />
     <file relUrl="Media/group_go.png" publishTime="03/12/2006 21:53:34" />
@@ -475,6 +604,7 @@
     <file relUrl="Media/background_gradient.gif" publishTime="12/04/2008 10:03:26" />
     <file relUrl="Support/Controls/ActivityCalendar.ascx" publishTime="10/02/2008 19:52:05" />
     <file relUrl="bin/Atrendia.CourseManagement.Logic.pdb" publishTime="10/05/2008 19:39:41" />
+    <file relUrl="Media/user_delete.png" publishTime="03/12/2006 21:59:00" />
     <file relUrl="Media/menu_active_grad.gif" publishTime="12/04/2008 10:25:28" />
     <file relUrl="Overview/Default.aspx" publishTime="02/18/2009 23:41:38" />
     <file relUrl="Media/calendar_view_week.png" publishTime="03/12/2006 21:50:18" />
@@ -482,60 +612,5 @@
     <file relUrl="bin/x86/Release/Atrendia.CourseManagement.Frontend.dll" publishTime="10/05/2008 19:39:42" />
     <file relUrl="Media/agenda.png" publishTime="03/12/2006 21:48:40" />
     <file relUrl="Default.aspx" publishTime="01/12/2009 23:27:04" />
-  </publishTarget>
-  <publishTarget publishUrl="C:\CDM\Deploy\CourseManagement\">
-    <file relUrl="bin/Atrendia.CourseManagement.Frontend.pdb" publishTime="02/19/2009 01:15:09" />
-    <file relUrl="Support/Global.Master" publishTime="01/14/2009 11:35:55" />
-    <file relUrl="Media/group_edit.png" publishTime="03/12/2006 21:53:32" />
-    <file relUrl="Calendar/Course.aspx" publishTime="02/19/2009 01:13:59" />
-    <file relUrl="Media/user_add.png" publishTime="03/12/2006 21:58:58" />
-    <file relUrl="People/View.aspx" publishTime="02/19/2009 01:00:23" />
-    <file relUrl="Calendar/View.aspx" publishTime="01/13/2009 03:50:02" />
-    <file relUrl="Media/calendar_view_day.png" publishTime="03/12/2006 21:50:16" />
-    <file relUrl="Media/user_edit.png" publishTime="03/12/2006 21:59:02" />
-    <file relUrl="bin/Atrendia.CourseManagement.Frontend.dll" publishTime="02/19/2009 01:15:10" />
-    <file relUrl="Media/done.png" publishTime="03/12/2006 21:48:14" />
-    <file relUrl="Media/group.png" publishTime="03/12/2006 21:53:28" />
-    <file relUrl="People/Upload.aspx" publishTime="01/23/2009 22:09:10" />
-    <file relUrl="Media/site.js" publishTime="01/14/2009 12:25:28" />
-    <file relUrl="Media/group_add.png" publishTime="03/12/2006 21:53:30" />
-    <file relUrl="Calendar/Default.aspx" publishTime="02/18/2009 23:59:54" />
-    <file relUrl="Support/Controls/MiniCalendar.ascx" publishTime="06/12/2008 01:36:34" />
-    <file relUrl="Media/group_delete.png" publishTime="03/12/2006 21:53:30" />
-    <file relUrl="Media/tick.png" publishTime="03/12/2006 21:58:48" />
-    <file relUrl="Media/atrendia_logo.png" publishTime="11/03/2008 13:55:03" />
-    <file relUrl="Media/block_header_grad.gif" publishTime="12/04/2008 09:56:16" />
-    <file relUrl="Media/calendar_view_month.png" publishTime="03/12/2006 21:50:16" />
-    <file relUrl="Web.config" publishTime="01/13/2009 19:58:27" />
-    <file relUrl="Media/main.css" publishTime="01/13/2009 00:48:54" />
-    <file relUrl="Media/extra.css" publishTime="01/13/2009 19:21:31" />
-    <file relUrl="Default.aspx" publishTime="01/12/2009 23:27:02" />
-    <file relUrl="Media/menu_inactive_grad.gif" publishTime="01/12/2009 22:54:35" />
-    <file relUrl="Login.aspx" publishTime="01/13/2009 02:08:37" />
-    <file relUrl="Media/Web.config" publishTime="01/13/2009 19:58:18" />
-    <file relUrl="Media/exclamation.png" publishTime="03/12/2006 21:52:48" />
-    <file relUrl="bin/Atrendia.CourseManagement.Logic.pdb" publishTime="02/19/2009 01:06:08" />
-    <file relUrl="bin/Interop.AstonRDLightWeightModel.dll" publishTime="01/14/2009 16:42:56" />
-    <file relUrl="Media/attention.png" publishTime="03/12/2006 21:48:56" />
-    <file relUrl="Media/user_go.png" publishTime="03/12/2006 21:59:02" />
-    <file relUrl="Media/excel_file.gif" publishTime="09/22/2005 13:11:12" />
-    <file relUrl="Calendar/Preparation.aspx" publishTime="01/13/2009 19:21:43" />
-    <file relUrl="Media/mootools-1.11.js" publishTime="12/01/2008 20:34:00" />
-    <file relUrl="People/Default.aspx" publishTime="02/19/2009 00:39:15" />
-    <file relUrl="Media/email.png" publishTime="03/12/2006 21:52:32" />
-    <file relUrl="Media/user.png" publishTime="03/12/2006 21:58:58" />
-    <file relUrl="Support/Web.config" publishTime="01/13/2009 00:25:57" />
-    <file relUrl="Logout.aspx" publishTime="01/13/2009 00:49:31" />
-    <file relUrl="bin/Atrendia.CourseManagement.Logic.dll" publishTime="02/19/2009 01:06:08" />
-    <file relUrl="Support/Controls/AccountManager.ascx" publishTime="01/13/2009 00:10:31" />
-    <file relUrl="Media/background_gradient.gif" publishTime="12/04/2008 10:03:25" />
-    <file relUrl="Support/Controls/ActivityCalendar.ascx" publishTime="01/13/2009 16:58:11" />
-    <file relUrl="Media/menu_active_grad.gif" publishTime="12/04/2008 10:25:28" />
-    <file relUrl="Media/user_delete.png" publishTime="03/12/2006 21:59:00" />
-    <file relUrl="Overview/Default.aspx" publishTime="02/18/2009 23:41:36" />
-    <file relUrl="Media/calendar_view_week.png" publishTime="03/12/2006 21:50:18" />
-    <file relUrl="Media/group_go.png" publishTime="03/12/2006 21:53:34" />
-    <file relUrl="Media/agenda.png" publishTime="03/12/2006 21:48:40" />
-    <file relUrl="Media/information.png" publishTime="03/12/2006 21:53:50" />
   </publishTarget>
 </publishData>

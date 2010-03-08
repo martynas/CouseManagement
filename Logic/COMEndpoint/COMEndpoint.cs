@@ -474,7 +474,7 @@ namespace Atrendia.CourseManagement.Logic.COMEndpoint
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
         /// <returns></returns>
-        public List<Entities.Activity> GetActivities(string deliveryPackageContactId, 
+        public List<Entities.Activity> GetActivities(string contactId, 
             int? maxRecords, DateTime startDate, DateTime? endDate)
         {
             List<Entities.Activity> activities = new List<Entities.Activity>();
@@ -482,8 +482,7 @@ namespace Atrendia.CourseManagement.Logic.COMEndpoint
             query.AddOrderByField("startDate", "ASC");
             query.ShowDeleted = false;
             query.AddWherePart("inhouse", false, "=");
-            query.AddWherePart("primaryDeliveryPackage-.primaryContact-.id", 
-                deliveryPackageContactId, "=");
+            query.AddWherePart("primaryContact", contactId, "=");
             query.AddWherePart("startDate", startDate.AddDays(-1), ">");
             if (endDate.HasValue)
                 query.AddWherePart("startDate", endDate.Value.AddDays(1), "<");
@@ -518,7 +517,6 @@ namespace Atrendia.CourseManagement.Logic.COMEndpoint
             query.ShowDeleted = false;
             //query.AddWherePart("inhouse", false, "=");
             query.AddWherePart("primaryUser", primaryUserId, "=");
-            query.AddWherePart("primaryDeliveryPackage", null, "is not");
             query.AddWherePart("startDate", startDate.AddDays(-1), ">");
             if (!includeDone)
                 query.AddWherePart("activityDone", false, "=");

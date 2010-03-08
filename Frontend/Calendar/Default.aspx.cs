@@ -285,7 +285,7 @@ namespace Atrendia.CourseManagement.Frontend.Calendar
                 lblDate.Text = activity.Date.ToString("d MMM yyyy");
                 if (activity.TypeFlag == Logic.Entities.ActivityTypeFlag.Course)
                 {
-                    lblTagCourse.Visible = true;
+                    //lblTagCourse.Visible = true;
                     // Show time if we can
                     try
                     {
@@ -314,7 +314,7 @@ namespace Atrendia.CourseManagement.Frontend.Calendar
                 }
                 else if (activity.TypeFlag == Logic.Entities.ActivityTypeFlag.Preparation)
                 {
-                    lblTagPreparation.Visible = true;
+                    //lblTagPreparation.Visible = true;
                     lblDone.Visible = activity.IsDone;
                 }
                 else
